@@ -31,7 +31,7 @@
         "svelte-check": "^4.4.5",
         "tslib": "^2.8.1",
         "tslog": "^4.10.2",
-        "typescript": "^6.0.0",
+        "typescript": "^5.7.2",
         "unocss": "^66.6.7",
         "unocss-preset-scrollbar": "^4.0.0",
         "wxt": "^0.20.20"
