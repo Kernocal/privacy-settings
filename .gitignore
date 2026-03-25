@@ -1,0 +1,9 @@
+.env
+.env.*
+.output
+.wxt
+.hide
+node_modules
+package
+publish/*
+modules
