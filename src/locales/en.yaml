@@ -1,0 +1,35 @@
+extension:
+  name: "Privacy Controls"
+  description: "Manage browser's privacy controls."
+  description_chrome: "Manage Chrome's privacy controls."
+  description_edge: "Manage Edge's privacy controls."
+  chrome_name: "Chrome Privacy Controls"
+  edge_name: "Edge Privacy Controls"
+settings:
+  services:
+    description: "Settings that enable or disable features that require third-party network services provided by $2 and your default search provider."
+    autofillAddressEnabled: "If enabled, $1 offers to automatically fill in addresses and other form data."
+    autofillCreditCardEnabled: "If enabled, $1 offers to automatically fill in credit card forms."
+    passwordSavingEnabled: "If enabled, the password manager will ask if you want to save passwords."
+    searchSuggestEnabled: "If enabled, $1 sends the text you type into the Omnibox to your default search engine, which provides predictions of websites and searches that are likely completions of what you've typed so far."
+    spellingServiceEnabled: "If enabled, $1 uses a web service to help correct spelling errors."
+    translationServiceEnabled: "If enabled, $1 offers to translate pages that aren't in a language you read."
+    safeBrowsingEnabled: "If enabled, $1 does its best to protect you from phishing and malware."
+    safeBrowsingExtendedReportingEnabled: "If enabled, $1 will send additional information to $2 when SafeBrowsing blocks a page, such as the content of the blocked page."
+    alternateErrorPagesEnabled: "If enabled, $1 uses a web service to help resolve navigation errors."
+  websites:
+    description: "Settings that determine what information $1 makes available to websites."
+    doNotTrackEnabled: "If enabled, $1 sends 'Do Not Track' (DNT: 1) header with your requests."
+    thirdPartyCookiesAllowed: "If disabled, $1 blocks third-party sites from setting cookies. Extensions may not enable this API in Incognito mode, where third-party cookies are blocked and can only be allowed at the site level. If you try setting this API to true in Incognito, it will throw an error. Note: Individual sites may still be able to access third-party cookies when this API returns false, if they have a valid exemption or they use the Storage Access API instead."
+    hyperlinkAuditingEnabled: "If enabled, $1 sends auditing pings when requested by a website (<a ping>)."
+    protectedContentEnabled: "Available on Windows and ChromeOS only: If enabled, $1 provides a unique ID to plugins in order to run protected content."
+    referrersEnabled: "If enabled, $1 sends referer headers with your requests."
+  network:
+    description: "Settings that influence $1's handling of network connections in general."
+    webRTCIPHandlingPolicy: "Allow users to specify the media performance/privacy tradeoffs which impacts how WebRTC traffic will be routed and how much local address information is exposed."
+    networkPredictionEnabled: "If enabled, $1 attempts to speed up your web browsing experience by pre-resolving DNS entries and preemptively opening TCP and SSL connections to servers. This preference only affects actions taken by $1's internal prediction service. It does not affect webpage-initiated prefectches or preconnects."
+  webrtc:
+    default: "Default"
+    default_public_and_private_interfaces: "Public and Private Interfaces"
+    default_public_interface_only: "Public Interface Only"
+    disable_non_proxied_udp: "Disable Non-Proxied UDP"

@@ -1,0 +1,30 @@
+{
+    "services": {
+        "items": {
+            "autofillAddressEnabled": { "default": true },
+            "autofillCreditCardEnabled": { "default": true },
+            "passwordSavingEnabled": { "default": true },
+            "searchSuggestEnabled": { "default": true },
+            "spellingServiceEnabled": { "default": false },
+            "translationServiceEnabled": { "default": true },
+            "safeBrowsingEnabled": { "default": true },
+            "safeBrowsingExtendedReportingEnabled": { "default": false },
+            "alternateErrorPagesEnabled": { "default": true }
+        }
+    },
+    "websites": {
+        "items": {
+            "doNotTrackEnabled": { "default": false },
+            "thirdPartyCookiesAllowed": { "default": true },
+            "hyperlinkAuditingEnabled": { "default": true },
+            "protectedContentEnabled": { "default": true },
+            "referrersEnabled": { "default": true }
+        }
+    },
+    "network": {
+        "items": {
+            "webRTCIPHandlingPolicy": { "default": "default" },
+            "networkPredictionEnabled": { "default": true }
+        }
+    }
+}
