@@ -1,8 +1,8 @@
 extension:
   name: "Privacy Controls"
   description: "Manage browser's privacy controls."
-  description_chrome: "Manage Chrome's privacy controls."
-  description_edge: "Manage Edge's privacy controls."
+  description_chrome: "Manage Chrome's internal privacy settings."
+  description_edge: "Manage Edge's internal privacy settings."
   chrome_name: "Chrome Privacy Controls"
   edge_name: "Edge Privacy Controls"
 settings:
