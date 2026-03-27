@@ -13,6 +13,9 @@ export default defineConfig({
             ],
         }
     },
+    // autoIcons: {
+    //     sizes: [128, 300],
+    // },
     srcDir: 'src',
     modules: ['@wxt-dev/unocss', '@wxt-dev/module-svelte', '@wxt-dev/i18n/module', '@wxt-dev/auto-icons'],
     alias: {
