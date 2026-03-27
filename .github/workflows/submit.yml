@@ -6,6 +6,10 @@ on:
         default: false
         type: boolean
         description: Skip submission and perform a dry run
+      firstRelease:
+        default: false
+        type: boolean
+        description: Skip submitting to stores (for first release)
 
 jobs:
   validate:
@@ -42,10 +46,19 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Bump Version
+        if: ${{ !inputs.firstRelease }}
         id: version
         run: |
           pnpm dlx changelogen@latest --bump
           NEW_VERSION=$(node -p "require('./package.json').version")
+          echo "newVersion=$NEW_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Get Current Version
+        if: ${{ inputs.firstRelease }}
+        id: current-version
+        run: |
+          NEW_VERSION=$(node -p "require('./package.json').version")
+          pnpm dlx changelogen@latest --r "$NEW_VERSION" --output CHANGELOG.md --no-bump
           echo "newVersion=$NEW_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Build and Zip
@@ -69,22 +82,23 @@ jobs:
           git push
           git push --tags
         env:
-          NEW_VERSION: ${{ steps.version.outputs.newVersion }}
+          NEW_VERSION: ${{ steps.version.outputs.newVersion || steps.current-version.outputs.newVersion }}
 
       - name: Release
         if: ${{ !inputs.dryRun }}
-        run: pnpm dlx changelogen@latest gh release ${{ steps.version.outputs.newVersion }} --token ${{ github.token }}
+        run: pnpm dlx changelogen@latest gh release ${{ steps.version.outputs.newVersion || steps.current-version.outputs.newVersion }} --token ${{ github.token }}
         env:
           GH_TOKEN: ${{ github.token }}
 
       # Don't upload sources zip - it can contain .env files, which may include secrets
       - name: Upload ZIPs
         if: ${{ !inputs.dryRun }}
-        run: gh release upload v${{ steps.version.outputs.newVersion }} .output/*.zip
+        run: gh release upload v${{ steps.version.outputs.newVersion || steps.current-version.outputs.newVersion }} .output/*.zip
         env:
           GH_TOKEN: ${{ github.token }}
 
       - name: Submit
+        if: ${{ !inputs.firstRelease }}
         run: |
           pnpm publish-extension \
             --chrome-zip .output/*-chrome.zip \
