@@ -1,5 +1,4 @@
-![extension page image](publish/assets/1g1280x800.png "Extension on page")
-![extension image](publish/assets/github.png "Extension")
+![extension image](publish/assets/github/sidepanel.png "Extension sidepanel")
 
 ## Browser Privacy Controls
 <p float="left">
@@ -11,11 +10,17 @@
 </a>
 </p>
 
-Manage Chromium-based browser's privacy settings.
+Manage Chromium-based browser's privacy settings using the <code>browser.privacy</code> API provided to extensions.
+
+The API has three categoires with properties to be changed:
+- Services: Spelling Service, Safe Browsing, Password Saving
+- Websites: Third Party Cookies, Referrers headers, Do Not Track headers
+- Network: Network Prediction Service, WebRTC Policy
+
+Zero data collection.
 
 
 Note: It should work on any Chromium-based browser, but has only been tested on Chrome and Edge.
-
 
 
 This extension is not affiliated with Google or Microsoft.
@@ -25,7 +30,7 @@ This extension is not affiliated with Google or Microsoft.
 To build and load the extension from source run:
 
 ```
-degit <github-username>/<repo-name> <folder-name>
+degit Kernocal/privacy-settings <folder-name>
 
 pnpm install
 
