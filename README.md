@@ -12,7 +12,7 @@
 
 Manage Chromium-based browser's privacy settings using the <code>browser.privacy</code> API provided to extensions.
 
-The API has three categoires with properties to be changed:
+The API has three categories with properties to be changed:
 - Services: Spelling Service, Safe Browsing, Password Saving
 - Websites: Third Party Cookies, Referrers headers, Do Not Track headers
 - Network: Network Prediction Service, WebRTC Policy
