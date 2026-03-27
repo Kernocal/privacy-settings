@@ -53,5 +53,4 @@
 ### ❤️ Contributors
 
 - Kern ([@KernApps](https://github.com/KernApps))
-- GitHub Actions ([@github-actions-up-and-running](https://github.com/github-actions-up-and-running))
 
