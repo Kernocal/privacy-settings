@@ -1,4 +1,4 @@
-name: Submit for Review
+name: Release Current Version
 on:
   workflow_dispatch:
     inputs:
