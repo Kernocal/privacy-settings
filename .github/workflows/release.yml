@@ -43,7 +43,7 @@ jobs:
         id: version
         run: |
           NEW_VERSION=$(node -p "require('./package.json').version")
-          pnpm dlx changelogen@latest --r 0.2.1 --output CHANGELOG.md --no-bump
+          pnpm dlx changelogen@latest --output CHANGELOG.md --no-bump
           echo "newVersion=$NEW_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Build and Zip
