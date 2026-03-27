@@ -2,10 +2,10 @@
 
 ## Browser Privacy Controls
 <p float="left">
-<a href="https://chrome.google.com/webstore/detail/" style="text-decoration: none;">
+<a href="https://chrome.google.com/webstore/detail/eckcihheoilcibochhhmnenhobabbhce" style="text-decoration: none;">
 <img src="publish/assets/github/chrome.png" height="56" title="install from the Chrome Web Store">
 </a>
-<a href="https://microsoftedge.microsoft.com/addons/detail/" style="text-decoration: none;">
+<a href="https://microsoftedge.microsoft.com/addons/detail/mjdggenongadpakianjddhlkaklmjceh" style="text-decoration: none;">
 <img src="publish/assets/github/edge.png" height="56" title="install from the Edge Store">
 </a>
 </p>
