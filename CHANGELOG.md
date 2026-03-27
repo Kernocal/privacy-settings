@@ -1,5 +1,5 @@
 
-## v0.2.2
+## ...main
 
 
 ### 🚀 Enhancements
@@ -43,7 +43,10 @@
 - Fix ([ee7f794](https://github.com/Kernocal/privacy-settings/commit/ee7f794))
 - Stop validating for now. ([11e981e](https://github.com/Kernocal/privacy-settings/commit/11e981e))
 - Perms. ([f79b51e](https://github.com/Kernocal/privacy-settings/commit/f79b51e))
+<<<<<<< HEAD
 - Fix submit as well. ([6a5ba94](https://github.com/Kernocal/privacy-settings/commit/6a5ba94))
+=======
+>>>>>>> refs/remotes/origin/main
 
 ### ❤️ Contributors
 

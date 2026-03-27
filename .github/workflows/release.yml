@@ -45,7 +45,7 @@ jobs:
         id: version
         run: |
           NEW_VERSION=$(node -p "require('./package.json').version")
-          pnpm dlx changelogen@latest --output CHANGELOG.md --no-bump
+          pnpm dlx changelogen@latest --release "$NEW_VERSION" --output CHANGELOG.md --no-bump
           echo "newVersion=$NEW_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Build and Zip
@@ -73,13 +73,6 @@ jobs:
 
       - name: Release
         if: ${{ !inputs.dryRun }}
-        run: pnpm dlx changelogen@latest gh release ${{ steps.version.outputs.newVersion }} --token ${{ github.token }}
-        env:
-          GH_TOKEN: ${{ github.token }}
-
-      # Don't upload sources zip - it can contain .env files, which may include secrets
-      - name: Upload ZIPs
-        if: ${{ !inputs.dryRun }}
-        run: gh release upload v${{ steps.version.outputs.newVersion }} .output/*.zip
+        run: gh release create v${{ steps.version.outputs.newVersion }} .output/*.zip --title "v${{ steps.version.outputs.newVersion }}" --notes-file CHANGELOG.md
         env:
           GH_TOKEN: ${{ github.token }}
