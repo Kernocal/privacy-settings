@@ -2,7 +2,6 @@ import type { Browser } from '#imports'
 import { i18n } from '#imports'
 import data from 'lib/data.json'
 import { sidepanelLogger } from 'lib/logger'
-import { formatSettingLabel } from 'lib/string'
 
 // not allowed: { network: [''], services: [], websites: ['fledgeEnabled', 'topicsEnabled', 'relatedWebsiteSetsEnabled', 'adMeasurementEnabled'] }
 // err: Extensions aren't allowed to enable Privacy Sandbox APIs.
@@ -10,7 +9,7 @@ import { formatSettingLabel } from 'lib/string'
 type CategoryName = 'network' | 'services' | 'websites'
 
 export type SettingItem = {
-    label: string
+    labelKey: string
     setting: PrivacySetting<string> | PrivacySetting<boolean>
     descriptionKey: string
     defaultValue: string | boolean
@@ -18,6 +17,7 @@ export type SettingItem = {
 
 type SettingsCategory = {
     name: CategoryName
+    labelKey: string
     descriptionKey: string
     items: Record<string, SettingItem>
 }
@@ -82,20 +82,23 @@ function createPrivacySetting(category: CategoryName, property: string) {
     }
 }
 
-function buildCategories(data: CategoryData) {
+async function buildCategories(data: CategoryData) {
+    const { os } = await browser.runtime.getPlatformInfo()
     const categories: Record<string, SettingsCategory> = {}
 
     for (const [category, { items: properties }] of Object.entries(data) as [CategoryName, CategoryData[CategoryName]][]) {
         const items: Record<string, SettingItem> = {}
         for (const [property, info] of Object.entries(properties)) {
+            if (property === 'protectedContentEnabled' && os !== 'win' && os !== 'cros')
+                continue
             items[property] = {
-                label: formatSettingLabel(property),
+                labelKey: `settings.${category}.${property}.label`,
                 setting: createPrivacySetting(category, property),
-                descriptionKey: `settings.${category}.${property}`,
+                descriptionKey: `settings.${category}.${property}.description`,
                 defaultValue: info.default,
             }
         }
-        categories[category] = { name: category, descriptionKey: `settings.${category}.description`, items }
+        categories[category] = { name: category, labelKey: `settings.${category}.label`, descriptionKey: `settings.${category}.description`, items }
     }
     return categories
 }

@@ -1,13 +1,13 @@
 <script lang='ts'>
     import type { SettingItem } from 'lib/items.svelte'
-    import { i18n } from '#imports'
+    import { getAppConfig, i18n } from '#imports'
     import { settingsCategories, webRTCPolicies } from 'lib/items.svelte'
     import { capitalise } from 'lib/string'
 
     const collapsed = $state<Record<string, boolean>>({})
-    const browserName = capitalise(import.meta.env.BROWSER)
-    const brand = browserName === 'Chrome' ? 'Google' : 'Microsoft'
-    const serviceProvider = browserName === 'Chrome' ? 'Google' : 'Microsoft (plus Google)'
+    const { browserName } = getAppConfig()
+    const brand = browserName === 'chrome' ? 'Google' : 'Microsoft'
+    const serviceProvider = browserName === 'chrome' ? 'Google' : 'Microsoft (plus Google)'
 
 </script>
 
@@ -19,15 +19,15 @@
     ]}>
         <span class='flex flex-1 flex-col'>
             <div class='flex gap-2 items-center'>
-                <span class='text-sm font-medium'>{item.label}</span>
+                <span class='text-sm font-medium'>{i18n.t(item.labelKey as any)}</span>
             </div>
-            <span class='text-xs text-on-surface-muted leading-relaxed mt-1'>{i18n.t(item.descriptionKey as any, [browserName, serviceProvider])}</span>
+            <span class='text-xs text-on-surface-muted leading-relaxed mt-1'>{i18n.t(item.descriptionKey as any, [capitalise(browserName), serviceProvider])}</span>
         </span>
 
         <div class={['flex flex-col items-end gap-1.5', typeof setting.value === 'string' && 'w-full']}>
             {#if typeof item.defaultValue === 'boolean'}
                 <span class='text-xs text-on-surface-subtle font-bold mb-2 px-1 py-0.5 border border-surface-border rounded bg-black/20'>
-                    Default: {item.defaultValue === true ? 'On' : 'Off'}
+                    {i18n.t('sidepanel.defaultLabel')} {item.defaultValue === true ? i18n.t('sidepanel.on') : i18n.t('sidepanel.off')}
                 </span>
             {/if}
 
@@ -55,52 +55,53 @@
     <div class='mx-auto max-w-md'>
         <header class='mb-8'>
             <h2 class='text-xl tracking-tight font-bold'>
-                Internal Browser Privacy Controls
+                {i18n.t('sidepanel.heading')}
             </h2>
-            <p class='text-md text-on-surface-muted mt-2'><strong>Disclaimer:</strong> This extension is not affiliated with {brand}.</p>
-            <p class='text-md text-on-surface-muted'>All settings are managed within the browser using the <code>browser.privacy</code> extension API.</p>
+            <p class='text-md text-on-surface-muted mt-2'><strong>{i18n.t('sidepanel.disclaimer')}</strong> {i18n.t('sidepanel.disclaimerText', [brand])}</p>
+            <p class='text-md text-on-surface-muted'>{i18n.t('sidepanel.managedText')}</p>
             <a
-                href={browserName === 'Edge' ? 'https://learn.microsoft.com/en-us/microsoft-edge/extensions/developer-guide/api-support' : 'https://developer.chrome.com/docs/extensions/reference/api/privacy'}
+                href={browserName === 'edge' ? 'https://learn.microsoft.com/en-us/microsoft-edge/extensions/developer-guide/api-support' : 'https://developer.chrome.com/docs/extensions/reference/api/privacy'}
                 class='text-sm text-accent py-2 transition-colors hover:(text-accent-hover underline)'>
-                Learn more about the browser.privacy API
+                {i18n.t('sidepanel.learnMore')}
             </a>
         </header>
 
         <div class='space-y-8'>
-            {#each Object.values(settingsCategories) as category (category.name)}
-                {@const categoryLabel = capitalise(category.name)}
-                <section class='shadow-3xl p-5 rounded-xl bg-surface-panel transition-all'>
-                    <button
-                        onclick={() => collapsed[category.name] = !collapsed[category.name]}
-                        class='group/header flex w-full items-center justify-between'
-                        aria-expanded={!collapsed[category.name]}
-                    >
-                        <h2 class='text-lg font-bold flex gap-2 items-center'>
-                            {categoryLabel}
-                        </h2>
-                        <div class={[
-                            'text-on-surface-subtle transition-transform duration-300 group-hover/header:text-accent',
-                            collapsed[category.name] ? 'rotate-180' : '',
-                        ]}>
-                            <svg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6' /></svg>
-                        </div>
-                    </button>
-
-                    {#if !collapsed[category.name]}
-                        <div class='mt-4'>
-                            <p class='text-sm text-on-surface-muted mb-4'>{i18n.t(category.descriptionKey as any, [browserName, serviceProvider])}</p>
-                            <div class='space-y-3'>
-                                {#each Object.values(category.items) as item (item.label)}
-                                    {@const isControllable = ['controllable_by_this_extension', 'controlled_by_this_extension'].includes(item.setting.levelOfControl)}
-                                    {#if item.setting.ready && isControllable}
-                                        {@render itemDetails(item)}
-                                    {/if}
-                                {/each}
+            {#await settingsCategories then categories}
+                {#each Object.values(categories) as category (category.name)}
+                    <section class='shadow-3xl p-5 rounded-xl bg-surface-panel transition-all'>
+                        <button
+                            onclick={() => collapsed[category.name] = !collapsed[category.name]}
+                            class='group/header flex w-full items-center justify-between'
+                            aria-expanded={!collapsed[category.name]}
+                        >
+                            <h2 class='text-lg font-bold flex gap-2 items-center'>
+                                {i18n.t(category.labelKey as any)}
+                            </h2>
+                            <div class={[
+                                'text-on-surface-subtle transition-transform duration-300 group-hover/header:text-accent',
+                                collapsed[category.name] ? 'rotate-180' : '',
+                            ]}>
+                                <svg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6' /></svg>
                             </div>
-                        </div>
-                    {/if}
-                </section>
-            {/each}
+                        </button>
+
+                        {#if !collapsed[category.name]}
+                            <div class='mt-4'>
+                                <p class='text-sm text-on-surface-muted mb-4'>{i18n.t(category.descriptionKey as any, [capitalise(browserName), serviceProvider])}</p>
+                                <div class='space-y-3'>
+                                    {#each Object.values(category.items) as item (item.labelKey)}
+                                        {@const isControllable = ['controllable_by_this_extension', 'controlled_by_this_extension'].includes(item.setting.levelOfControl)}
+                                        {#if item.setting.ready && isControllable}
+                                            {@render itemDetails(item)}
+                                        {/if}
+                                    {/each}
+                                </div>
+                            </div>
+                        {/if}
+                    </section>
+                {/each}
+            {/await}
         </div>
     </div>
 </div>
