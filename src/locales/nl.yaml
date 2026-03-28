@@ -1,0 +1,79 @@
+extension:
+    name: Privacyinstellingen
+    description: Beheer de privacyinstellingen van de browser.
+    description_chrome: Beheer de interne privacyinstellingen van Chrome.
+    description_edge: Beheer de interne privacyinstellingen van Edge.
+    chrome_name: Chrome Privacyinstellingen
+    edge_name: Edge Privacyinstellingen
+sidepanel:
+    heading: Interne Privacyinstellingen van de Browser
+    disclaimer: 'Disclaimer:'
+    disclaimerText: Deze extensie is niet gelieerd aan $1.
+    managedText: Alle instellingen worden beheerd binnen de browser met behulp van de browser.privacy extensie-API.
+    learnMore: Meer informatie over de browser.privacy API
+    defaultLabel: 'Standaard:'
+    on: Aan
+    off: Uit
+settings:
+    services:
+        label: Diensten
+        description: 'Instellingen die functies in- of uitschakelen die netwerkdiensten van derden vereisen, aangeboden door $2 en uw standaard zoekmachine.'
+        autofillAddressEnabled:
+            label: Adres automatisch invullen
+            description: 'Indien ingeschakeld, biedt $1 aan om automatisch adressen en andere formuliergegevens in te vullen.'
+        autofillCreditCardEnabled:
+            label: Creditcard automatisch invullen
+            description: 'Indien ingeschakeld, biedt $1 aan om automatisch creditcardformulieren in te vullen.'
+        passwordSavingEnabled:
+            label: Wachtwoorden opslaan
+            description: 'Indien ingeschakeld, vraagt de wachtwoordbeheerder of u wachtwoorden wilt opslaan.'
+        searchSuggestEnabled:
+            label: Zoeksuggesties
+            description: 'Indien ingeschakeld, stuurt $1 de tekst die u in de Omnibox typt naar uw standaard zoekmachine, die voorspellingen geeft van websites en zoekopdrachten die waarschijnlijk voltooiingen zijn van wat u tot nu toe hebt getypt.'
+        spellingServiceEnabled:
+            label: Spellingcontrole
+            description: 'Indien ingeschakeld, gebruikt $1 een webservice om spelfouten te helpen corrigeren.'
+        translationServiceEnabled:
+            label: Vertaaldienst
+            description: "Indien ingeschakeld, biedt $1 aan om pagina's te vertalen die niet in een taal zijn die u leest."
+        safeBrowsingEnabled:
+            label: Safe Browsing
+            description: 'Indien ingeschakeld, doet $1 zijn best om u te beschermen tegen phishing en malware.'
+        safeBrowsingExtendedReportingEnabled:
+            label: Uitgebreide rapportage Safe Browsing
+            description: 'Indien ingeschakeld, stuurt $1 aanvullende informatie naar $2 wanneer SafeBrowsing een pagina blokkeert, zoals de inhoud van de geblokkeerde pagina.'
+        alternateErrorPagesEnabled:
+            label: "Alternatieve foutpagina's"
+            description: 'Indien ingeschakeld, gebruikt $1 een webservice om navigatiefouten op te lossen.'
+    websites:
+        label: Websites
+        description: Instellingen die bepalen welke informatie $1 beschikbaar stelt aan websites.
+        doNotTrackEnabled:
+            label: Do Not Track
+            description: "Indien ingeschakeld, stuurt $1 een 'Do Not Track'-header (DNT: 1) mee met uw verzoeken."
+        thirdPartyCookiesAllowed:
+            label: Cookies van derden toegestaan
+            description: 'Indien uitgeschakeld, blokkeert $1 het plaatsen van cookies door websites van derden. Extensies kunnen deze API niet inschakelen in Incognito-modus, waar cookies van derden worden geblokkeerd en alleen op siteniveau kunnen worden toegestaan. Als u probeert deze API in Incognito op true in te stellen, wordt er een fout gegenereerd. Opmerking: Individuele sites kunnen mogelijk nog steeds toegang krijgen tot cookies van derden wanneer deze API false retourneert, als ze een geldige vrijstelling hebben of als ze in plaats daarvan de Storage Access API gebruiken.'
+        hyperlinkAuditingEnabled:
+            label: Hyperlink-auditing
+            description: 'Indien ingeschakeld, stuurt $1 auditingpings wanneer een website daarom vraagt (<a ping>).'
+        protectedContentEnabled:
+            label: Beschermde inhoud
+            description: 'Indien ingeschakeld, biedt $1 een unieke ID aan plug-ins om beschermde inhoud af te spelen.'
+        referrersEnabled:
+            label: Referrers
+            description: 'Indien ingeschakeld, stuurt $1 referer-headers mee met uw verzoeken.'
+    network:
+        label: Netwerk
+        description: Instellingen die van invloed zijn op de manier waarop $1 netwerkverbindingen in het algemeen afhandelt.
+        webRTCIPHandlingPolicy:
+            label: WebRTC IP-afhandelingsbeleid
+            description: 'Stel gebruikers in staat om de afweging tussen mediaprestaties en privacy te specificeren, wat invloed heeft op hoe WebRTC-verkeer wordt gerouteerd en hoeveel lokale adresinformatie wordt blootgesteld.'
+        networkPredictionEnabled:
+            label: Netwerkvoorspelling
+            description: "Indien ingeschakeld, probeert $1 uw surfervaring te versnellen door DNS-vermeldingen vooraf op te lossen en preventief TCP- en SSL-verbindingen met servers te openen. Deze voorkeur heeft alleen invloed op acties die worden uitgevoerd door de interne voorspellingsservice van $1. Het heeft geen invloed op door webpagina's geïnitieerde prefetches of preconnects."
+    webrtc:
+        default: Standaard
+        default_public_and_private_interfaces: Openbare en privé-interfaces
+        default_public_interface_only: Alleen openbare interface
+        disable_non_proxied_udp: Niet-geproxyde UDP uitschakelen

@@ -1,0 +1,79 @@
+extension:
+    name: Tietosuoja-asetukset
+    description: Hallinnoi selaimen tietosuoja-asetuksia.
+    description_chrome: Hallinnoi Chrome-selaimen sisäisiä tietosuoja-asetuksia.
+    description_edge: Hallinnoi Edge-selaimen sisäisiä tietosuoja-asetuksia.
+    chrome_name: Chrome-tietosuoja-asetukset
+    edge_name: Edge-tietosuoja-asetukset
+sidepanel:
+    heading: Selaimen sisäiset tietosuoja-asetukset
+    disclaimer: 'Vastuuvapauslauseke:'
+    disclaimerText: 'Tämä laajennus ei ole $1:n sidosryhmä.'
+    managedText: 'Kaikkia asetuksia hallinnoidaan selaimessa browser.privacy-laajennuksen API:n avulla.'
+    learnMore: 'Lue lisää browser.privacy API:sta'
+    defaultLabel: 'Oletus:'
+    on: Päällä
+    off: Pois
+settings:
+    services:
+        label: Palvelut
+        description: 'Asetukset, jotka ottavat käyttöön tai poistavat käytöstä ominaisuuksia, jotka edellyttävät $2:n ja oletushakupalveluntarjoajasi tarjoamia kolmannen osapuolen verkkopalveluita.'
+        autofillAddressEnabled:
+            label: Osoitteen automaattinen täyttö
+            description: 'Jos käytössä, $1 tarjoutuu täyttämään osoitteet ja muut lomaketiedot automaattisesti.'
+        autofillCreditCardEnabled:
+            label: Luottokortin automaattinen täyttö
+            description: 'Jos käytössä, $1 tarjoutuu täyttämään luottokorttilomakkeet automaattisesti.'
+        passwordSavingEnabled:
+            label: Salasanojen tallentaminen
+            description: 'Jos käytössä, salasananhallinta kysyy, haluatko tallentaa salasanat.'
+        searchSuggestEnabled:
+            label: Hakuehdotukset
+            description: 'Jos käytössä, $1 lähettää Omnibox-kenttään kirjoittamasi tekstin oletushakukoneellesi, joka tarjoaa ennusteita verkkosivustoista ja hauista, jotka todennäköisesti täydentävät kirjoittamaasi tekstiä.'
+        spellingServiceEnabled:
+            label: Oikeinkirjoituspalvelu
+            description: 'Jos käytössä, $1 käyttää verkkopalvelua oikeinkirjoitusvirheiden korjaamiseen.'
+        translationServiceEnabled:
+            label: Käännöspalvelu
+            description: 'Jos käytössä, $1 tarjoutuu kääntämään sivut, jotka eivät ole lukemallasi kielellä.'
+        safeBrowsingEnabled:
+            label: Turvallinen selaus
+            description: 'Jos käytössä, $1 pyrkii parhaansa mukaan suojaamaan sinua tietojenkalastelulta ja haittaohjelmilta.'
+        safeBrowsingExtendedReportingEnabled:
+            label: Turvallisen selauksen laajennettu raportointi
+            description: 'Jos käytössä, $1 lähettää lisätietoja $2:lle, kun SafeBrowsing estää sivun, kuten estetyn sivun sisällön.'
+        alternateErrorPagesEnabled:
+            label: Vaihtoehtoiset virhesivut
+            description: 'Jos käytössä, $1 käyttää verkkopalvelua navigointivirheiden ratkaisemiseen.'
+    websites:
+        label: Verkkosivustot
+        description: 'Asetukset, jotka määrittävät, mitä tietoja $1 antaa verkkosivustojen käyttöön.'
+        doNotTrackEnabled:
+            label: Älä seuraa
+            description: "Jos käytössä, $1 lähettää pyyntöjesi mukana 'Älä seuraa' (DNT: 1) -otsakkeen."
+        thirdPartyCookiesAllowed:
+            label: Kolmannen osapuolen evästeet sallittu
+            description: 'Jos pois käytöstä, $1 estää kolmannen osapuolen sivustoja asettamasta evästeitä. Laajennukset eivät voi ottaa tätä API:a käyttöön Incognito-tilassa, jossa kolmannen osapuolen evästeet on estetty ja ne voidaan sallia vain sivustotasolla. Jos yrität asettaa tämän API:n arvoksi tosi Incognito-tilassa, se aiheuttaa virheen. Huomautus: Yksittäiset sivustot voivat silti käyttää kolmannen osapuolen evästeitä, kun tämä API palauttaa epätosi, jos niillä on voimassa oleva poikkeus tai ne käyttävät Storage Access API:a.'
+        hyperlinkAuditingEnabled:
+            label: Linkkien seuranta
+            description: 'Jos käytössä, $1 lähettää seurantapyyntöjä, kun verkkosivusto niitä pyytää (<a ping>).'
+        protectedContentEnabled:
+            label: Suojattu sisältö
+            description: 'Jos käytössä, $1 antaa lisäosille yksilöllisen tunnisteen suojatun sisällön toistamiseksi.'
+        referrersEnabled:
+            label: Viittaajat
+            description: 'Jos käytössä, $1 lähettää viittaajaotsakkeita pyyntöjesi mukana.'
+    network:
+        label: Verkko
+        description: 'Asetukset, jotka vaikuttavat $1:n verkkoyhteyksien käsittelyyn yleisesti.'
+        webRTCIPHandlingPolicy:
+            label: WebRTC IP -käsittelykäytäntö
+            description: 'Antaa käyttäjien määrittää median suorituskyvyn ja tietosuojan välisiä kompromisseja, jotka vaikuttavat siihen, miten WebRTC-liikenne reititetään ja kuinka paljon paikallisia osoitetietoja paljastetaan.'
+        networkPredictionEnabled:
+            label: Verkon ennakointi
+            description: 'Jos käytössä, $1 yrittää nopeuttaa selauskokemustasi ratkaisemalla DNS-merkinnät ennakkoon ja avaamalla ennakoivasti TCP- ja SSL-yhteyksiä palvelimiin. Tämä asetus vaikuttaa vain $1:n sisäisen ennakointipalvelun toimintoihin. Se ei vaikuta verkkosivujen käynnistämiin ennakkonoutopyyntöihin tai ennakkoyhteyksiin.'
+    webrtc:
+        default: Oletus
+        default_public_and_private_interfaces: Julkiset ja yksityiset rajapinnat
+        default_public_interface_only: Vain julkinen rajapinta
+        disable_non_proxied_udp: Poista välityspalvelimeton UDP käytöstä

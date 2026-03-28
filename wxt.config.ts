@@ -28,5 +28,7 @@ export default defineConfig({
         },
         keepProfileChanges: true,
         chromiumProfile: resolve('.wxt/chrome-data'),
+        chromiumArgs: ['--lang=en'],
+
     },
 })

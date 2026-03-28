@@ -1,0 +1,79 @@
+extension:
+    name: Controles de Privacidad
+    description: Administra los controles de privacidad del navegador.
+    description_chrome: Administra la configuración interna de privacidad de Chrome.
+    description_edge: Administra la configuración interna de privacidad de Edge.
+    chrome_name: Controles de Privacidad de Chrome
+    edge_name: Controles de Privacidad de Edge
+sidepanel:
+    heading: Controles Internos de Privacidad del Navegador
+    disclaimer: 'Aviso:'
+    disclaimerText: Esta extensión no está afiliada con $1.
+    managedText: Todas las configuraciones se administran dentro del navegador usando la API de extensión browser.privacy.
+    learnMore: Más información sobre la API browser.privacy
+    defaultLabel: 'Predeterminado:'
+    on: Activado
+    off: Desactivado
+settings:
+    services:
+        label: Servicios
+        description: Configuraciones que habilitan o deshabilitan funciones que requieren servicios de red de terceros proporcionados por $2 y tu proveedor de búsqueda predeterminado.
+        autofillAddressEnabled:
+            label: Autocompletar Dirección
+            description: 'Si está habilitado, $1 ofrece completar automáticamente direcciones y otros datos de formularios.'
+        autofillCreditCardEnabled:
+            label: Autocompletar Tarjeta de Crédito
+            description: 'Si está habilitado, $1 ofrece completar automáticamente formularios de tarjetas de crédito.'
+        passwordSavingEnabled:
+            label: Guardar Contraseñas
+            description: 'Si está habilitado, el administrador de contraseñas preguntará si deseas guardar las contraseñas.'
+        searchSuggestEnabled:
+            label: Sugerencias de Búsqueda
+            description: 'Si está habilitado, $1 envía el texto que escribes en el Omnibox a tu motor de búsqueda predeterminado, el cual proporciona predicciones de sitios web y búsquedas que probablemente completen lo que has escrito hasta ahora.'
+        spellingServiceEnabled:
+            label: Servicio de Ortografía
+            description: 'Si está habilitado, $1 usa un servicio web para ayudar a corregir errores ortográficos.'
+        translationServiceEnabled:
+            label: Servicio de Traducción
+            description: 'Si está habilitado, $1 ofrece traducir páginas que no están en un idioma que leas.'
+        safeBrowsingEnabled:
+            label: Navegación Segura
+            description: 'Si está habilitado, $1 hace todo lo posible para protegerte contra phishing y malware.'
+        safeBrowsingExtendedReportingEnabled:
+            label: Informes Extendidos de Navegación Segura
+            description: 'Si está habilitado, $1 enviará información adicional a $2 cuando SafeBrowsing bloquee una página, como el contenido de la página bloqueada.'
+        alternateErrorPagesEnabled:
+            label: Páginas de Error Alternativas
+            description: 'Si está habilitado, $1 usa un servicio web para ayudar a resolver errores de navegación.'
+    websites:
+        label: Sitios Web
+        description: Configuraciones que determinan qué información $1 pone a disposición de los sitios web.
+        doNotTrackEnabled:
+            label: No Rastrear
+            description: "Si está habilitado, $1 envía la cabecera 'No Rastrear' (DNT: 1) con tus solicitudes."
+        thirdPartyCookiesAllowed:
+            label: Cookies de Terceros Permitidas
+            description: 'Si está deshabilitado, $1 bloquea que sitios de terceros establezcan cookies. Las extensiones no pueden habilitar esta API en modo Incognito, donde las cookies de terceros están bloqueadas y solo pueden permitirse a nivel de sitio. Si intentas establecer esta API como verdadera en Incognito, generará un error. Nota: Sitios individuales aún pueden acceder a cookies de terceros cuando esta API devuelve falso, si tienen una exención válida o usan la Storage Access API en su lugar.'
+        hyperlinkAuditingEnabled:
+            label: Auditoría de Hipervínculos
+            description: 'Si está habilitado, $1 envía pings de auditoría cuando lo solicita un sitio web (<a ping>).'
+        protectedContentEnabled:
+            label: Contenido Protegido
+            description: 'Si está habilitado, $1 proporciona un ID único a los plugins para ejecutar contenido protegido.'
+        referrersEnabled:
+            label: Referencias
+            description: 'Si está habilitado, $1 envía cabeceras de referencia con tus solicitudes.'
+    network:
+        label: Red
+        description: Configuraciones que influyen en el manejo de conexiones de red en general por parte de $1.
+        webRTCIPHandlingPolicy:
+            label: Política de Manejo de IP de WebRTC
+            description: Permite a los usuarios especificar las compensaciones entre rendimiento multimedia y privacidad que afectan cómo se enrutará el tráfico de WebRTC y cuánta información de dirección local se expone.
+        networkPredictionEnabled:
+            label: Predicción de Red
+            description: 'Si está habilitado, $1 intenta acelerar tu experiencia de navegación web resolviendo previamente entradas DNS y abriendo anticipadamente conexiones TCP y SSL a los servidores. Esta preferencia solo afecta las acciones realizadas por el servicio de predicción interno de $1. No afecta las precargas o preconexiones iniciadas por páginas web.'
+    webrtc:
+        default: Predeterminado
+        default_public_and_private_interfaces: Interfaces Públicas y Privadas
+        default_public_interface_only: Solo Interfaz Pública
+        disable_non_proxied_udp: Deshabilitar UDP No Proxy

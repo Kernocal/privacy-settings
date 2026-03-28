@@ -1,0 +1,79 @@
+extension:
+    name: プライバシー設定
+    description: ブラウザのプライバシー設定を管理します。
+    description_chrome: Chromeの内部プライバシー設定を管理します。
+    description_edge: Edgeの内部プライバシー設定を管理します。
+    chrome_name: Chrome プライバシー設定
+    edge_name: Edge プライバシー設定
+sidepanel:
+    heading: ブラウザ内部プライバシー設定
+    disclaimer: 免責事項：
+    disclaimerText: この拡張機能は$1とは提携していません。
+    managedText: すべての設定は、browser.privacy拡張機能APIを使用してブラウザ内で管理されます。
+    learnMore: browser.privacy APIについて詳しく見る
+    defaultLabel: 既定値：
+    on: オン
+    off: オフ
+settings:
+    services:
+        label: サービス
+        description: $2およびデフォルトの検索プロバイダーが提供するサードパーティネットワークサービスを必要とする機能を有効または無効にする設定です。
+        autofillAddressEnabled:
+            label: 住所の自動入力
+            description: 有効にすると、$1が住所やその他のフォームデータを自動的に入力することを提案します。
+        autofillCreditCardEnabled:
+            label: クレジットカードの自動入力
+            description: 有効にすると、$1がクレジットカードフォームを自動的に入力することを提案します。
+        passwordSavingEnabled:
+            label: パスワードの保存
+            description: 有効にすると、パスワードマネージャーがパスワードを保存するかどうかを確認します。
+        searchSuggestEnabled:
+            label: 検索候補
+            description: 有効にすると、$1はOmniboxに入力したテキストをデフォルトの検索エンジンに送信し、入力中の内容に対して予測されるウェブサイトや検索候補を表示します。
+        spellingServiceEnabled:
+            label: スペルチェックサービス
+            description: 有効にすると、$1はウェブサービスを使用してスペルミスの修正を支援します。
+        translationServiceEnabled:
+            label: 翻訳サービス
+            description: 有効にすると、$1はあなたが読めない言語のページを翻訳することを提案します。
+        safeBrowsingEnabled:
+            label: セーフブラウジング
+            description: 有効にすると、$1はフィッシングやマルウェアからあなたを保護するために最善を尽くします。
+        safeBrowsingExtendedReportingEnabled:
+            label: セーフブラウジング拡張レポート
+            description: 有効にすると、SafeBrowsingがページをブロックした際に、ブロックされたページの内容などの追加情報を$1が$2に送信します。
+        alternateErrorPagesEnabled:
+            label: 代替エラーページ
+            description: 有効にすると、$1はウェブサービスを使用してナビゲーションエラーの解決を支援します。
+    websites:
+        label: ウェブサイト
+        description: $1がウェブサイトに提供する情報を決定する設定です。
+        doNotTrackEnabled:
+            label: トラッキング拒否
+            description: '有効にすると、$1はリクエストに「Do Not Track」（DNT: 1）ヘッダーを付与して送信します。'
+        thirdPartyCookiesAllowed:
+            label: サードパーティCookieを許可
+            description: 無効にすると、$1はサードパーティサイトによるCookieの設定をブロックします。拡張機能はIncognitoモードでこのAPIを有効にすることはできません。Incognitoモードではサードパーティ Cookieがブロックされ、サイトレベルでのみ許可できます。IncognitoでこのAPIをtrueに設定しようとするとエラーがスローされます。注意：このAPIがfalseを返す場合でも、有効な免除がある場合やStorage Access APIを使用している場合は、個々のサイトがサードパーティCookieにアクセスできる場合があります。
+        hyperlinkAuditingEnabled:
+            label: ハイパーリンク監査
+            description: 有効にすると、$1はウェブサイトからの要求に応じて監査用pingを送信します（<a ping>）。
+        protectedContentEnabled:
+            label: 保護されたコンテンツ
+            description: 有効にすると、$1は保護されたコンテンツを再生するためにプラグインに一意のIDを提供します。
+        referrersEnabled:
+            label: リファラー
+            description: 有効にすると、$1はリクエストにリファラーヘッダーを付与して送信します。
+    network:
+        label: ネットワーク
+        description: $1のネットワーク接続全般の処理に影響する設定です。
+        webRTCIPHandlingPolicy:
+            label: WebRTC IPハンドリングポリシー
+            description: メディアのパフォーマンスとプライバシーのトレードオフを指定できます。これはWebRTCトラフィックのルーティング方法やローカルアドレス情報の公開範囲に影響します。
+        networkPredictionEnabled:
+            label: ネットワーク予測
+            description: 有効にすると、$1はDNSエントリの事前解決やサーバーへのTCPおよびSSL接続の事前確立を行い、ウェブブラウジング体験の高速化を試みます。この設定は$1の内部予測サービスによるアクションにのみ影響します。ウェブページが開始するプリフェッチやプリコネクトには影響しません。
+    webrtc:
+        default: 既定
+        default_public_and_private_interfaces: パブリックおよびプライベートインターフェース
+        default_public_interface_only: パブリックインターフェースのみ
+        disable_non_proxied_udp: プロキシ未使用のUDPを無効化

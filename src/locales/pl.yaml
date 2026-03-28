@@ -1,0 +1,79 @@
+extension:
+    name: Kontrola Prywatności
+    description: Zarządzaj ustawieniami prywatności przeglądarki.
+    description_chrome: Zarządzaj wewnętrznymi ustawieniami prywatności Chrome.
+    description_edge: Zarządzaj wewnętrznymi ustawieniami prywatności Edge.
+    chrome_name: Kontrola Prywatności Chrome
+    edge_name: Kontrola Prywatności Edge
+sidepanel:
+    heading: Wewnętrzne ustawienia prywatności przeglądarki
+    disclaimer: 'Zastrzeżenie:'
+    disclaimerText: To rozszerzenie nie jest powiązane z $1.
+    managedText: Wszystkie ustawienia są zarządzane w przeglądarce za pomocą rozszerzenia browser.privacy API.
+    learnMore: Dowiedz się więcej o browser.privacy API
+    defaultLabel: 'Domyślnie:'
+    on: Wł.
+    off: Wył.
+settings:
+    services:
+        label: Usługi
+        description: Ustawienia włączające lub wyłączające funkcje wymagające usług sieciowych stron trzecich dostarczanych przez $2 i domyślnego dostawcę wyszukiwania.
+        autofillAddressEnabled:
+            label: Autouzupełnianie adresu
+            description: 'Jeśli włączone, $1 oferuje automatyczne wypełnianie adresów i innych danych formularzy.'
+        autofillCreditCardEnabled:
+            label: Autouzupełnianie karty kredytowej
+            description: 'Jeśli włączone, $1 oferuje automatyczne wypełnianie formularzy kart kredytowych.'
+        passwordSavingEnabled:
+            label: Zapisywanie haseł
+            description: 'Jeśli włączone, menedżer haseł zapyta, czy chcesz zapisać hasła.'
+        searchSuggestEnabled:
+            label: Sugestie wyszukiwania
+            description: 'Jeśli włączone, $1 wysyła tekst wpisywany w Omnibox do domyślnej wyszukiwarki, która dostarcza podpowiedzi stron i wyszukiwań będących prawdopodobnymi uzupełnieniami wpisywanego tekstu.'
+        spellingServiceEnabled:
+            label: Usługa sprawdzania pisowni
+            description: 'Jeśli włączone, $1 używa usługi internetowej do pomocy w poprawianiu błędów pisowni.'
+        translationServiceEnabled:
+            label: Usługa tłumaczenia
+            description: 'Jeśli włączone, $1 oferuje tłumaczenie stron, które nie są w języku, który czytasz.'
+        safeBrowsingEnabled:
+            label: Bezpieczne przeglądanie
+            description: 'Jeśli włączone, $1 dokłada wszelkich starań, aby chronić Cię przed phishingiem i złośliwym oprogramowaniem.'
+        safeBrowsingExtendedReportingEnabled:
+            label: Rozszerzone raportowanie bezpiecznego przeglądania
+            description: 'Jeśli włączone, $1 wysyła dodatkowe informacje do $2, gdy SafeBrowsing zablokuje stronę, takie jak zawartość zablokowanej strony.'
+        alternateErrorPagesEnabled:
+            label: Alternatywne strony błędów
+            description: 'Jeśli włączone, $1 używa usługi internetowej do pomocy w rozwiązywaniu błędów nawigacji.'
+    websites:
+        label: Strony internetowe
+        description: 'Ustawienia określające, jakie informacje $1 udostępnia stronom internetowym.'
+        doNotTrackEnabled:
+            label: Nie śledź
+            description: "Jeśli włączone, $1 wysyła nagłówek 'Do Not Track' (DNT: 1) wraz z Twoimi żądaniami."
+        thirdPartyCookiesAllowed:
+            label: Pliki cookie stron trzecich dozwolone
+            description: 'Jeśli wyłączone, $1 blokuje ustawianie plików cookie przez strony trzecie. Rozszerzenia nie mogą włączyć tego API w trybie Incognito, gdzie pliki cookie stron trzecich są blokowane i mogą być dozwolone tylko na poziomie witryny. Próba ustawienia tego API na true w trybie Incognito spowoduje błąd. Uwaga: Poszczególne witryny mogą nadal mieć dostęp do plików cookie stron trzecich, gdy to API zwraca false, jeśli mają ważne zwolnienie lub korzystają z Storage Access API.'
+        hyperlinkAuditingEnabled:
+            label: Audyt hiperłączy
+            description: 'Jeśli włączone, $1 wysyła pingi audytowe na żądanie strony internetowej (<a ping>).'
+        protectedContentEnabled:
+            label: Treści chronione
+            description: 'Jeśli włączone, $1 udostępnia unikalny identyfikator wtyczkom w celu odtwarzania treści chronionych.'
+        referrersEnabled:
+            label: Odsyłacze
+            description: 'Jeśli włączone, $1 wysyła nagłówki referer wraz z Twoimi żądaniami.'
+    network:
+        label: Sieć
+        description: Ustawienia wpływające na obsługę połączeń sieciowych przez $1.
+        webRTCIPHandlingPolicy:
+            label: Zasady obsługi IP WebRTC
+            description: 'Pozwala użytkownikom określić kompromis między wydajnością multimediów a prywatnością, co wpływa na trasowanie ruchu WebRTC oraz ilość ujawnianych informacji o adresie lokalnym.'
+        networkPredictionEnabled:
+            label: Przewidywanie sieci
+            description: 'Jeśli włączone, $1 próbuje przyspieszyć przeglądanie stron internetowych, wstępnie rozwiązując wpisy DNS oraz prewencyjnie otwierając połączenia TCP i SSL z serwerami. To ustawienie dotyczy tylko działań wewnętrznej usługi przewidywania $1. Nie wpływa na wstępne pobieranie ani wstępne łączenie inicjowane przez strony internetowe.'
+    webrtc:
+        default: Domyślne
+        default_public_and_private_interfaces: Interfejsy publiczne i prywatne
+        default_public_interface_only: Tylko interfejs publiczny
+        disable_non_proxied_udp: Wyłącz UDP bez proxy

@@ -1,0 +1,79 @@
+extension:
+  name: "Adatvédelmi beállítások"
+  description: "A böngésző adatvédelmi beállításainak kezelése."
+  description_chrome: "A Chrome belső adatvédelmi beállításainak kezelése."
+  description_edge: "Az Edge belső adatvédelmi beállításainak kezelése."
+  chrome_name: "Chrome adatvédelmi beállítások"
+  edge_name: "Edge adatvédelmi beállítások"
+sidepanel:
+  heading: "Belső böngésző adatvédelmi beállítások"
+  disclaimer: "Jogi nyilatkozat:"
+  disclaimerText: "Ez a bővítmény nem áll kapcsolatban a(z) $1 vállalattal."
+  managedText: "Minden beállítás a böngészőn belül, a browser.privacy bővítmény API segítségével van kezelve."
+  learnMore: "Tudjon meg többet a browser.privacy API-ról"
+  defaultLabel: "Alapértelmezett:"
+  on: "Be"
+  off: "Ki"
+settings:
+  services:
+    label: "Szolgáltatások"
+    description: "Beállítások, amelyek engedélyezik vagy letiltják a $2 és az alapértelmezett keresőszolgáltató által nyújtott, harmadik féltől származó hálózati szolgáltatásokat igénylő funkciókat."
+    autofillAddressEnabled:
+      label: "Cím automatikus kitöltése"
+      description: "Ha engedélyezve van, a(z) $1 felajánlja a címek és egyéb űrlapadatok automatikus kitöltését."
+    autofillCreditCardEnabled:
+      label: "Bankkártya automatikus kitöltése"
+      description: "Ha engedélyezve van, a(z) $1 felajánlja a bankkártya-űrlapok automatikus kitöltését."
+    passwordSavingEnabled:
+      label: "Jelszó mentése"
+      description: "Ha engedélyezve van, a jelszókezelő megkérdezi, hogy szeretné-e menteni a jelszavakat."
+    searchSuggestEnabled:
+      label: "Keresési javaslatok"
+      description: "Ha engedélyezve van, a(z) $1 elküldi az Omnibox mezőbe beírt szöveget az alapértelmezett keresőmotornak, amely webhelyek és keresések javaslatait adja meg a beírt szöveg valószínű kiegészítéseként."
+    spellingServiceEnabled:
+      label: "Helyesírás-ellenőrző szolgáltatás"
+      description: "Ha engedélyezve van, a(z) $1 egy webszolgáltatást használ a helyesírási hibák javításához."
+    translationServiceEnabled:
+      label: "Fordítási szolgáltatás"
+      description: "Ha engedélyezve van, a(z) $1 felajánlja az Ön által nem ismert nyelvű oldalak lefordítását."
+    safeBrowsingEnabled:
+      label: "Biztonságos böngészés"
+      description: "Ha engedélyezve van, a(z) $1 mindent megtesz az adathalászat és a kártevők elleni védelem érdekében."
+    safeBrowsingExtendedReportingEnabled:
+      label: "Biztonságos böngészés kiterjesztett jelentése"
+      description: "Ha engedélyezve van, a(z) $1 további információkat küld a(z) $2 számára, amikor a SafeBrowsing blokkol egy oldalt, például a blokkolt oldal tartalmát."
+    alternateErrorPagesEnabled:
+      label: "Alternatív hibaoldalak"
+      description: "Ha engedélyezve van, a(z) $1 egy webszolgáltatást használ a navigációs hibák megoldásához."
+  websites:
+    label: "Webhelyek"
+    description: "Beállítások, amelyek meghatározzák, hogy a(z) $1 milyen információkat tesz elérhetővé a webhelyek számára."
+    doNotTrackEnabled:
+      label: "Ne kövessen"
+      description: "Ha engedélyezve van, a(z) $1 Ne kövessen (DNT: 1) fejlécet küld a kéréseivel."
+    thirdPartyCookiesAllowed:
+      label: "Harmadik féltől származó sütik engedélyezése"
+      description: "Ha le van tiltva, a(z) $1 megakadályozza, hogy harmadik féltől származó webhelyek sütiket helyezzenek el. A bővítmények nem engedélyezhetik ezt az API-t Incognito módban, ahol a harmadik féltől származó sütik blokkolva vannak, és csak webhely szinten engedélyezhetők. Ha megpróbálja ezt az API-t Incognito módban igazra állítani, hibaüzenetet kap. Megjegyzés: Egyes webhelyek továbbra is hozzáférhetnek harmadik féltől származó sütikhez, ha ez az API hamisat ad vissza, amennyiben érvényes kivétellel rendelkeznek, vagy a Storage Access API-t használják."
+    hyperlinkAuditingEnabled:
+      label: "Hivatkozás-ellenőrzés"
+      description: "Ha engedélyezve van, a(z) $1 ellenőrző pingeket küld, ha egy webhely kéri (<a ping>)."
+    protectedContentEnabled:
+      label: "Védett tartalom"
+      description: "Ha engedélyezve van, a(z) $1 egyedi azonosítót biztosít a bővítményeknek a védett tartalmak lejátszásához."
+    referrersEnabled:
+      label: "Hivatkozó fejlécek"
+      description: "Ha engedélyezve van, a(z) $1 hivatkozó fejléceket küld a kéréseivel."
+  network:
+    label: "Hálózat"
+    description: "Beállítások, amelyek befolyásolják a(z) $1 hálózati kapcsolatok általános kezelését."
+    webRTCIPHandlingPolicy:
+      label: "WebRTC IP-kezelési szabályzat"
+      description: "Lehetővé teszi a felhasználók számára a média teljesítmény/adatvédelem közötti kompromisszum megadását, amely befolyásolja a WebRTC forgalom útvonalát és a helyi címinformációk kitettségének mértékét."
+    networkPredictionEnabled:
+      label: "Hálózati előrejelzés"
+      description: "Ha engedélyezve van, a(z) $1 megpróbálja felgyorsítani a böngészési élményt a DNS-bejegyzések előzetes feloldásával, valamint a TCP- és SSL-kapcsolatok megelőző megnyitásával a szerverekhez. Ez a beállítás csak a(z) $1 belső előrejelző szolgáltatásának műveleteit érinti. Nem vonatkozik a weblapok által kezdeményezett előzetes betöltésekre vagy előzetes kapcsolatokra."
+  webrtc:
+    default: "Alapértelmezett"
+    default_public_and_private_interfaces: "Nyilvános és privát interfészek"
+    default_public_interface_only: "Csak nyilvános interfész"
+    disable_non_proxied_udp: "Nem proxyzott UDP letiltása"

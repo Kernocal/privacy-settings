@@ -1,0 +1,79 @@
+extension:
+  name: "Ovládanie súkromia"
+  description: "Spravujte ovládanie súkromia prehliadača."
+  description_chrome: "Spravujte interné nastavenia súkromia Chrome."
+  description_edge: "Spravujte interné nastavenia súkromia Edge."
+  chrome_name: "Ovládanie súkromia Chrome"
+  edge_name: "Ovládanie súkromia Edge"
+sidepanel:
+  heading: "Interné ovládanie súkromia prehliadača"
+  disclaimer: "Upozornenie:"
+  disclaimerText: "Toto rozšírenie nie je prepojené s $1."
+  managedText: "Všetky nastavenia sa spravujú v rámci prehliadača pomocou rozšírenia browser.privacy API."
+  learnMore: "Zistite viac o browser.privacy API"
+  defaultLabel: "Predvolené:"
+  on: "Zapnuté"
+  off: "Vypnuté"
+settings:
+  services:
+    label: "Služby"
+    description: "Nastavenia, ktoré povoľujú alebo zakazujú funkcie vyžadujúce sieťové služby tretích strán poskytované spoločnosťou $2 a vaším predvoleným poskytovateľom vyhľadávania."
+    autofillAddressEnabled:
+      label: "Automatické dopĺňanie adries"
+      description: "Ak je povolené, $1 ponúka automatické vyplnenie adries a ďalších údajov formulárov."
+    autofillCreditCardEnabled:
+      label: "Automatické dopĺňanie kreditných kariet"
+      description: "Ak je povolené, $1 ponúka automatické vyplnenie formulárov s kreditnými kartami."
+    passwordSavingEnabled:
+      label: "Ukladanie hesiel"
+      description: "Ak je povolené, správca hesiel sa opýta, či chcete uložiť heslá."
+    searchSuggestEnabled:
+      label: "Návrhy vyhľadávania"
+      description: "Ak je povolené, $1 odosiela text, ktorý zadávate do Omnibox, vášmu predvolenému vyhľadávaciemu nástroju, ktorý poskytuje predpovede webových stránok a vyhľadávaní, ktoré pravdepodobne dopĺňajú to, čo ste doteraz napísali."
+    spellingServiceEnabled:
+      label: "Služba kontroly pravopisu"
+      description: "Ak je povolené, $1 používa webovú službu na pomoc s opravou pravopisných chýb."
+    translationServiceEnabled:
+      label: "Služba prekladu"
+      description: "Ak je povolené, $1 ponúka preklad stránok, ktoré nie sú v jazyku, ktorému rozumiete."
+    safeBrowsingEnabled:
+      label: "Bezpečné prehliadanie"
+      description: "Ak je povolené, $1 sa snaží čo najlepšie chrániť vás pred phishingom a malvérom."
+    safeBrowsingExtendedReportingEnabled:
+      label: "Rozšírené hlásenie bezpečného prehliadania"
+      description: "Ak je povolené, $1 odošle ďalšie informácie spoločnosti $2, keď SafeBrowsing zablokuje stránku, napríklad obsah zablokovanej stránky."
+    alternateErrorPagesEnabled:
+      label: "Alternatívne chybové stránky"
+      description: "Ak je povolené, $1 používa webovú službu na pomoc s riešením chýb navigácie."
+  websites:
+    label: "Webové stránky"
+    description: "Nastavenia, ktoré určujú, aké informácie $1 sprístupňuje webovým stránkam."
+    doNotTrackEnabled:
+      label: "Nesledovať"
+      description: "Ak je povolené, $1 odosiela hlavičku Do Not Track (DNT: 1) s vašimi požiadavkami."
+    thirdPartyCookiesAllowed:
+      label: "Povolené súbory cookie tretích strán"
+      description: "Ak je zakázané, $1 blokuje stránkam tretích strán nastavovanie súborov cookie. Rozšírenia nemôžu povoliť toto API v režime Incognito, kde sú súbory cookie tretích strán blokované a môžu byť povolené iba na úrovni jednotlivých stránok. Ak sa pokúsite nastaviť toto API na true v režime Incognito, vyvolá to chybu. Poznámka: Jednotlivé stránky môžu mať stále prístup k súborom cookie tretích strán, keď toto API vráti false, ak majú platnú výnimku alebo namiesto toho používajú Storage Access API."
+    hyperlinkAuditingEnabled:
+      label: "Audit hypertextových odkazov"
+      description: "Ak je povolené, $1 odosiela auditovacie pingy, keď to webová stránka vyžaduje (<a ping>)."
+    protectedContentEnabled:
+      label: "Chránený obsah"
+      description: "Ak je povolené, $1 poskytuje jedinečné ID doplnkom na spustenie chráneného obsahu."
+    referrersEnabled:
+      label: "Odkazujúce hlavičky"
+      description: "Ak je povolené, $1 odosiela hlavičky referer s vašimi požiadavkami."
+  network:
+    label: "Sieť"
+    description: "Nastavenia, ktoré ovplyvňujú spôsob, akým $1 spracováva sieťové pripojenia vo všeobecnosti."
+    webRTCIPHandlingPolicy:
+      label: "Zásady spracovania IP adries WebRTC"
+      description: "Umožňuje používateľom určiť kompromisy medzi výkonom médií a súkromím, ktoré ovplyvňujú smerovanie prevádzky WebRTC a množstvo odhalených informácií o lokálnej adrese."
+    networkPredictionEnabled:
+      label: "Predikcia siete"
+      description: "Ak je povolené, $1 sa pokúša zrýchliť vaše prehliadanie webu predčasným rozpoznávaním DNS záznamov a preventívnym otváraním TCP a SSL spojení so servermi. Toto nastavenie ovplyvňuje iba akcie vykonávané internou predikčnou službou $1. Neovplyvňuje načítavanie ani pripájanie iniciované webovou stránkou."
+  webrtc:
+    default: "Predvolené"
+    default_public_and_private_interfaces: "Verejné a súkromné rozhrania"
+    default_public_interface_only: "Iba verejné rozhranie"
+    disable_non_proxied_udp: "Zakázať neproxované UDP"

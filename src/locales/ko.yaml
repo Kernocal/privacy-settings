@@ -1,0 +1,79 @@
+extension:
+    name: 개인정보 보호 설정
+    description: 브라우저의 개인정보 보호 설정을 관리합니다.
+    description_chrome: Chrome의 내부 개인정보 보호 설정을 관리합니다.
+    description_edge: Edge의 내부 개인정보 보호 설정을 관리합니다.
+    chrome_name: Chrome 개인정보 보호 설정
+    edge_name: Edge 개인정보 보호 설정
+sidepanel:
+    heading: 내부 브라우저 개인정보 보호 설정
+    disclaimer: '면책 조항:'
+    disclaimerText: 이 확장 프로그램은 $1과(와) 관련이 없습니다.
+    managedText: 모든 설정은 browser.privacy 확장 프로그램 API를 사용하여 브라우저 내에서 관리됩니다.
+    learnMore: browser.privacy API에 대해 자세히 알아보기
+    defaultLabel: '기본값:'
+    on: 켜기
+    off: 끄기
+settings:
+    services:
+        label: 서비스
+        description: $2 및 기본 검색 공급자가 제공하는 타사 네트워크 서비스를 필요로 하는 기능을 활성화하거나 비활성화하는 설정입니다.
+        autofillAddressEnabled:
+            label: 주소 자동 완성
+            description: 활성화하면 $1이(가) 주소 및 기타 양식 데이터를 자동으로 채울 것을 제안합니다.
+        autofillCreditCardEnabled:
+            label: 신용카드 자동 완성
+            description: 활성화하면 $1이(가) 신용카드 양식을 자동으로 채울 것을 제안합니다.
+        passwordSavingEnabled:
+            label: 비밀번호 저장
+            description: 활성화하면 비밀번호 관리자가 비밀번호를 저장할지 묻습니다.
+        searchSuggestEnabled:
+            label: 검색 제안
+            description: '활성화하면 $1이(가) Omnibox에 입력한 텍스트를 기본 검색 엔진으로 전송하여, 입력 중인 내용의 예상 완성어로 웹사이트 및 검색어를 제안합니다.'
+        spellingServiceEnabled:
+            label: 맞춤법 검사 서비스
+            description: 활성화하면 $1이(가) 웹 서비스를 사용하여 맞춤법 오류를 교정합니다.
+        translationServiceEnabled:
+            label: 번역 서비스
+            description: 활성화하면 $1이(가) 사용자가 읽지 못하는 언어로 된 페이지의 번역을 제안합니다.
+        safeBrowsingEnabled:
+            label: 세이프 브라우징
+            description: 활성화하면 $1이(가) 피싱 및 멀웨어로부터 최대한 보호합니다.
+        safeBrowsingExtendedReportingEnabled:
+            label: 세이프 브라우징 확장 보고
+            description: 활성화하면 SafeBrowsing이 페이지를 차단할 때 차단된 페이지의 콘텐츠 등 추가 정보를 $1이(가) $2에 전송합니다.
+        alternateErrorPagesEnabled:
+            label: 대체 오류 페이지
+            description: 활성화하면 $1이(가) 웹 서비스를 사용하여 탐색 오류를 해결합니다.
+    websites:
+        label: 웹사이트
+        description: $1이(가) 웹사이트에 제공하는 정보를 결정하는 설정입니다.
+        doNotTrackEnabled:
+            label: 추적 금지
+            description: "활성화하면 $1이(가) 요청과 함께 'Do Not Track' (DNT: 1) 헤더를 전송합니다."
+        thirdPartyCookiesAllowed:
+            label: 타사 쿠키 허용
+            description: '비활성화하면 $1이(가) 타사 사이트의 쿠키 설정을 차단합니다. 확장 프로그램은 Incognito 모드에서 이 API를 활성화할 수 없으며, 해당 모드에서는 타사 쿠키가 차단되고 사이트 수준에서만 허용할 수 있습니다. Incognito에서 이 API를 true로 설정하려고 하면 오류가 발생합니다. 참고: 이 API가 false를 반환하더라도 유효한 면제가 있거나 Storage Access API를 사용하는 경우 개별 사이트가 여전히 타사 쿠키에 접근할 수 있습니다.'
+        hyperlinkAuditingEnabled:
+            label: 하이퍼링크 감사
+            description: 활성화하면 웹사이트가 요청할 때 $1이(가) 감사 핑을 전송합니다 (<a ping>).
+        protectedContentEnabled:
+            label: 보호된 콘텐츠
+            description: 활성화하면 $1이(가) 보호된 콘텐츠를 실행하기 위해 플러그인에 고유 ID를 제공합니다.
+        referrersEnabled:
+            label: 리퍼러
+            description: 활성화하면 $1이(가) 요청과 함께 리퍼러 헤더를 전송합니다.
+    network:
+        label: 네트워크
+        description: $1의 전반적인 네트워크 연결 처리에 영향을 미치는 설정입니다.
+        webRTCIPHandlingPolicy:
+            label: WebRTC IP 처리 정책
+            description: '사용자가 미디어 성능/개인정보 보호 간의 균형을 지정할 수 있으며, 이는 WebRTC 트래픽의 라우팅 방식과 로컬 주소 정보의 노출 범위에 영향을 줍니다.'
+        networkPredictionEnabled:
+            label: 네트워크 예측
+            description: 활성화하면 $1이(가) DNS 항목을 미리 확인하고 서버에 대한 TCP 및 SSL 연결을 선제적으로 열어 웹 브라우징 경험을 가속화하려고 시도합니다. 이 설정은 $1의 내부 예측 서비스가 수행하는 동작에만 영향을 미칩니다. 웹페이지에서 시작된 프리페치 또는 프리커넥트에는 영향을 주지 않습니다.
+    webrtc:
+        default: 기본값
+        default_public_and_private_interfaces: 공개 및 비공개 인터페이스
+        default_public_interface_only: 공개 인터페이스만
+        disable_non_proxied_udp: 프록시되지 않은 UDP 비활성화

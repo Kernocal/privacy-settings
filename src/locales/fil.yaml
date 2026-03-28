@@ -1,0 +1,79 @@
+extension:
+    name: Mga Kontrol sa Privacy
+    description: Pamahalaan ang mga kontrol sa privacy ng browser.
+    description_chrome: Pamahalaan ang mga internal na setting ng privacy ng Chrome.
+    description_edge: Pamahalaan ang mga internal na setting ng privacy ng Edge.
+    chrome_name: Mga Kontrol sa Privacy ng Chrome
+    edge_name: Mga Kontrol sa Privacy ng Edge
+sidepanel:
+    heading: Mga Internal na Kontrol sa Privacy ng Browser
+    disclaimer: 'Paalala:'
+    disclaimerText: Ang extension na ito ay hindi kaanib ng $1.
+    managedText: Lahat ng mga setting ay pinamamahalaan sa loob ng browser gamit ang browser.privacy extension API.
+    learnMore: Matuto pa tungkol sa browser.privacy API
+    defaultLabel: 'Default:'
+    on: Bukas
+    off: Sarado
+settings:
+    services:
+        label: Mga Serbisyo
+        description: Mga setting na nagpapagana o nagpapatigil ng mga feature na nangangailangan ng mga third-party na serbisyo sa network na ibinibigay ng $2 at ng iyong default na search provider.
+        autofillAddressEnabled:
+            label: Autofill ng Address
+            description: 'Kung naka-enable, awtomatikong mag-aalok ang $1 na punan ang mga address at iba pang datos sa form.'
+        autofillCreditCardEnabled:
+            label: Autofill ng Credit Card
+            description: 'Kung naka-enable, awtomatikong mag-aalok ang $1 na punan ang mga form ng credit card.'
+        passwordSavingEnabled:
+            label: Pag-save ng Password
+            description: 'Kung naka-enable, tatanungin ka ng password manager kung gusto mong i-save ang mga password.'
+        searchSuggestEnabled:
+            label: Mga Mungkahi sa Paghahanap
+            description: 'Kung naka-enable, ipinapadala ng $1 ang teksto na tina-type mo sa Omnibox sa iyong default na search engine, na nagbibigay ng mga prediksyon ng mga website at paghahanap na malamang na pagkumpleto ng na-type mo.'
+        spellingServiceEnabled:
+            label: Serbisyo sa Pagbabaybay
+            description: 'Kung naka-enable, gumagamit ang $1 ng web service upang makatulong sa pagwawasto ng mga maling pagbabaybay.'
+        translationServiceEnabled:
+            label: Serbisyo sa Pagsasalin
+            description: 'Kung naka-enable, mag-aalok ang $1 na isalin ang mga pahina na wala sa wikang nababasa mo.'
+        safeBrowsingEnabled:
+            label: Ligtas na Pagba-browse
+            description: 'Kung naka-enable, gagawin ng $1 ang lahat ng makakaya upang protektahan ka mula sa phishing at malware.'
+        safeBrowsingExtendedReportingEnabled:
+            label: Pinahabang Pag-uulat ng Ligtas na Pagba-browse
+            description: 'Kung naka-enable, magpapadala ang $1 ng karagdagang impormasyon sa $2 kapag hinarangan ng SafeBrowsing ang isang pahina, tulad ng nilalaman ng hinarangang pahina.'
+        alternateErrorPagesEnabled:
+            label: Mga Alternatibong Pahina ng Error
+            description: 'Kung naka-enable, gumagamit ang $1 ng web service upang makatulong sa paglutas ng mga error sa pag-navigate.'
+    websites:
+        label: Mga Website
+        description: Mga setting na tumutukoy kung anong impormasyon ang ibinibigay ng $1 sa mga website.
+        doNotTrackEnabled:
+            label: Huwag Subaybayan
+            description: "Kung naka-enable, nagpapadala ang $1 ng 'Do Not Track' (DNT: 1) header kasama ng iyong mga kahilingan."
+        thirdPartyCookiesAllowed:
+            label: Pinapayagan ang Third-Party Cookies
+            description: 'Kung naka-disable, hinaharangan ng $1 ang mga third-party na site mula sa pagtatakda ng cookies. Hindi maaaring paganahin ng mga extension ang API na ito sa Incognito mode, kung saan hinaharangan ang mga third-party cookies at maaari lamang payagan sa antas ng site. Kung susubukan mong itakda ang API na ito sa true sa Incognito, magta-throw ito ng error. Tandaan: Maaari pa ring ma-access ng mga indibidwal na site ang mga third-party cookies kapag nagbabalik ng false ang API na ito, kung mayroon silang valid na exemption o gumagamit sila ng Storage Access API.'
+        hyperlinkAuditingEnabled:
+            label: Pag-audit ng Hyperlink
+            description: 'Kung naka-enable, nagpapadala ang $1 ng mga auditing ping kapag hiniling ng isang website (<a ping>).'
+        protectedContentEnabled:
+            label: Protektadong Nilalaman
+            description: 'Kung naka-enable, nagbibigay ang $1 ng natatanging ID sa mga plugin upang makapag-play ng protektadong nilalaman.'
+        referrersEnabled:
+            label: Mga Referrer
+            description: 'Kung naka-enable, nagpapadala ang $1 ng mga referer header kasama ng iyong mga kahilingan.'
+    network:
+        label: Network
+        description: Mga setting na nakaka-apekto sa paraan ng pamamahala ng $1 sa mga koneksyon sa network sa pangkalahatan.
+        webRTCIPHandlingPolicy:
+            label: Patakaran sa Paghawak ng WebRTC IP
+            description: Payagan ang mga gumagamit na tukuyin ang mga tradeoff sa performance/privacy ng media na nakakaapekto sa kung paano iruruta ang trapiko ng WebRTC at kung gaano karaming lokal na impormasyon ng address ang ilalantad.
+        networkPredictionEnabled:
+            label: Prediksyon ng Network
+            description: 'Kung naka-enable, susubukan ng $1 na pabilisin ang iyong karanasan sa pagba-browse sa web sa pamamagitan ng paunang pag-resolve ng mga DNS entry at paunang pagbubukas ng mga koneksyon sa TCP at SSL sa mga server. Ang kagustuhang ito ay nakakaapekto lamang sa mga aksyon na ginawa ng internal na serbisyo ng prediksyon ng $1. Hindi nito naaapektuhan ang mga prefetch o preconnect na sinimulan ng webpage.'
+    webrtc:
+        default: Default
+        default_public_and_private_interfaces: Mga Pampubliko at Pribadong Interface
+        default_public_interface_only: Pampublikong Interface Lamang
+        disable_non_proxied_udp: I-disable ang Non-Proxied UDP
