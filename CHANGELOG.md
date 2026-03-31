@@ -1,4 +1,45 @@
 
+## v0.2.2
+
+[compare changes](https://github.com/Kernocal/privacy-settings/compare/v0.2.1...v0.2.2)
+
+### 🚀 Enhancements
+
+- Languages. ([9217e98](https://github.com/Kernocal/privacy-settings/commit/9217e98))
+- Build store data and images with viteshot. ([ec53bca](https://github.com/Kernocal/privacy-settings/commit/ec53bca))
+- More language stuff. ([f37de33](https://github.com/Kernocal/privacy-settings/commit/f37de33))
+
+### 🩹 Fixes
+
+- Only display setting if chromeos/win, final locales. ([4a31e95](https://github.com/Kernocal/privacy-settings/commit/4a31e95))
+- Some language formatting. ([fc680b0](https://github.com/Kernocal/privacy-settings/commit/fc680b0))
+
+### 📖 Documentation
+
+- Actions. ([24148c2](https://github.com/Kernocal/privacy-settings/commit/24148c2))
+- Oops, fix links. ([e505520](https://github.com/Kernocal/privacy-settings/commit/e505520))
+- Oops 2x, fix links. ([ae5914c](https://github.com/Kernocal/privacy-settings/commit/ae5914c))
+- Local package, move everything around.. ([d4aaccc](https://github.com/Kernocal/privacy-settings/commit/d4aaccc))
+
+### 📦 Build
+
+- Stop lint. ([3ace9e4](https://github.com/Kernocal/privacy-settings/commit/3ace9e4))
+
+### 🏡 Chore
+
+- Python? ([02d0f23](https://github.com/Kernocal/privacy-settings/commit/02d0f23))
+- Get promos. ([cd86758](https://github.com/Kernocal/privacy-settings/commit/cd86758))
+
+### 🤖 CI
+
+- Cover first release on submit workflow instead. ([a3fc734](https://github.com/Kernocal/privacy-settings/commit/a3fc734))
+- Node 20 deprecated ([bca2578](https://github.com/Kernocal/privacy-settings/commit/bca2578))
+- Combine into one. ([c48adfc](https://github.com/Kernocal/privacy-settings/commit/c48adfc))
+
+### ❤️ Contributors
+
+- Kern ([@KernApps](https://github.com/KernApps))
+
 ## v0.2.1
 
 
