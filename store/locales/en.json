@@ -1,0 +1,10 @@
+{
+    "name": "Privacy Controls",
+    "headline": "Take Control of Your Browser Privacy",
+    "headlineEmphasis": "Browser Privacy",
+    "description": "Manage your browser's built-in privacy settings from a single, intuitive sidebar panel using the browser.privacy API.",
+    "featureToggle": "Toggle services, website, and network settings",
+    "featureCookies": "Block third-party cookies and tracking",
+    "featureWebRTC": "Control WebRTC, referrers, and Do Not Track",
+    "featureDefaults": "See defaults at a glance with status badges"
+}

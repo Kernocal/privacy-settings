@@ -17,6 +17,7 @@ export default antfu(
             'style/max-statements-per-line': ['warn'],
             'no-console': ['warn'],
             '@typescript-eslint/consistent-type-definitions': ['off'],
+            'import/no-mutable-exports': ['off'],
         },
     },
 )

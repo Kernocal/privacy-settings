@@ -1,0 +1,10 @@
+{
+    "name": "Controles de Privacidad",
+    "headline": "Toma el control de la privacidad de tu navegador",
+    "headlineEmphasis": "Privacidad del navegador",
+    "description": "Gestiona la configuración de privacidad integrada de tu navegador desde un único panel lateral intuitivo utilizando la API browser.privacy.",
+    "featureToggle": "Alterna la configuración de servicios, sitios web y red",
+    "featureCookies": "Bloquea las cookies de terceros y el rastreo",
+    "featureWebRTC": "Controla WebRTC, los referentes y Do Not Track",
+    "featureDefaults": "Consulta los valores predeterminados de un vistazo con los indicadores de estado"
+}

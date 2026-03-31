@@ -1,0 +1,10 @@
+{
+    "name": "隐私控制",
+    "headline": "掌控您的浏览器隐私",
+    "headlineEmphasis": "浏览器隐私",
+    "description": "使用 browser.privacy API，通过直观的单一侧边栏面板管理您浏览器的内置隐私设置。",
+    "featureToggle": "切换服务、网站和网络设置",
+    "featureCookies": "拦截第三方 Cookie 和跟踪",
+    "featureWebRTC": "控制 WebRTC、引荐来源网址和 Do Not Track",
+    "featureDefaults": "借助状态徽章，默认设置一目了然"
+}
