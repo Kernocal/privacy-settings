@@ -5,6 +5,5 @@
 .hide
 node_modules
 package
-store/exports/*.txt
-store/*.json
+store
 modules
