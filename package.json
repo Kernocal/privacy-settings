@@ -10,8 +10,8 @@
         "zip-edge": "wxt zip -b edge",
         "check": "svelte-check --tsconfig ./tsconfig.json",
         "postinstall": "wxt prepare",
-        "lint": "eslint --fix .",
-        "view-lint": "eslint .",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
         "store:dev": "viteshot dev store",
         "store:export": "viteshot export store",
         "get-data": "tsx --env-file=.env store/suggestData.ts"

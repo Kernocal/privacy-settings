@@ -1,7 +1,7 @@
 <script lang='ts'>
     import icon from '../assets/icon.png'
 
-    let { t, captures } = $props()
+    const { t, captures } = $props()
 </script>
 
 <style>

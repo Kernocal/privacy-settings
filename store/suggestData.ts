@@ -115,20 +115,20 @@ Respond as JSON array of strings.`,
     const pause = () => new Promise<void>(res => setTimeout(res, 1000))
 
     const permissionJustifications = await generatePermissionJustifications(ai, model, permissions, description)
-    console.log('Got permission justifications')
+    // console.log('Got permission justifications')
     await pause()
     const singlePurpose = await generateSinglePurpose(ai, model, description)
-    console.log('Got single purpose')
+    // console.log('Got single purpose')
     await pause()
     const searchTerms = await generateSearchTerms(ai, model, description)
-    console.log('Got search terms')
+    // console.log('Got search terms')
 
     const resultJson = JSON.stringify({ permissionJustifications, singlePurpose, searchTerms }, null, 4)
 
     const outPath = resolve(fileURLToPath(import.meta.url), '..', 'data-suggestions.json')
     try {
         await writeFile(outPath, resultJson, 'utf-8')
-        console.log('Finished: wrote suggestions to', outPath)
+        // console.log('Finished: wrote suggestions to', outPath)
     }
     catch (error) {
         console.warn(`Failed to write suggestions to ${outPath}:`, error)
