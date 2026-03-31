@@ -1,12 +1,12 @@
-![extension image](store/exports/assets/github/sidepanel.png "Extension sidepanel")
+![extension image](store/exports/github/sidepanel.png "Extension sidepanel")
 
 ## Browser Privacy Controls
 <p float="left">
 <a href="https://chrome.google.com/webstore/detail/eckcihheoilcibochhhmnenhobabbhce" style="text-decoration: none;">
-<img src="publish/assets/github/chrome.png" height="56" title="install from the Chrome Web Store">
+<img src="publish/github/chrome.png" height="56" title="install from the Chrome Web Store">
 </a>
 <a href="https://microsoftedge.microsoft.com/addons/detail/mjdggenongadpakianjddhlkaklmjceh" style="text-decoration: none;">
-<img src="publish/assets/github/edge.png" height="56" title="install from the Edge Store">
+<img src="publish/github/edge.png" height="56" title="install from the Edge Store">
 </a>
 </p>
 
