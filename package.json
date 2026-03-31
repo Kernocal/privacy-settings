@@ -11,11 +11,15 @@
         "check": "svelte-check --tsconfig ./tsconfig.json",
         "postinstall": "wxt prepare",
         "lint": "eslint --fix .",
-        "view-lint": "eslint ."
+        "view-lint": "eslint .",
+        "store:dev": "viteshot dev store",
+        "store:export": "viteshot export store",
+        "get-data": "tsx --env-file=.env store/suggestData.ts"
     },
     "devDependencies": {
         "@antfu/eslint-config": "^7.7.3",
         "@google/genai": "^1.46.0",
+        "@sveltejs/vite-plugin-svelte": "^7.0.0",
         "@tsconfig/svelte": "^5.0.8",
         "@unocss/eslint-plugin": "^66.6.7",
         "@webext-core/match-patterns": "^1.0.3",
@@ -25,6 +29,7 @@
         "@wxt-dev/module-svelte": "^2.0.5",
         "@wxt-dev/unocss": "^1.0.1",
         "defu": "^6.1.4",
+        "dotenv-cli": "^11.0.0",
         "eslint": "^10.1.0",
         "eslint-plugin-svelte": "^3.16.0",
         "publish-browser-extension": "^4.0.4",
@@ -33,9 +38,11 @@
         "svelte-check": "^4.4.5",
         "tslib": "^2.8.1",
         "tslog": "^4.10.2",
+        "tsx": "^4.21.0",
         "typescript": "^5.7.2",
         "unocss": "^66.6.7",
         "unocss-preset-scrollbar": "^4.0.0",
+        "viteshot": "link:../gen-images",
         "wxt": "^0.20.20"
     }
 }

@@ -1,4 +1,4 @@
-![extension image](publish/assets/github/sidepanel.png "Extension sidepanel")
+![extension image](store/exports/assets/github/sidepanel.png "Extension sidepanel")
 
 ## Browser Privacy Controls
 <p float="left">

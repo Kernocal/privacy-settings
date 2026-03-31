@@ -5,6 +5,6 @@
 .hide
 node_modules
 package
-publish/*.ts
-publish/assets/*.txt
+store/exports/*.txt
+store/*.json
 modules
