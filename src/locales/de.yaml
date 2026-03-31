@@ -1,79 +1,79 @@
 extension:
-  name: "Datenschutzeinstellungen"
-  description: "Datenschutzeinstellungen des Browsers verwalten."
-  description_chrome: "Interne Datenschutzeinstellungen von Chrome verwalten."
-  description_edge: "Interne Datenschutzeinstellungen von Edge verwalten."
-  chrome_name: "Chrome Datenschutzeinstellungen"
-  edge_name: "Edge Datenschutzeinstellungen"
+    name: Datenschutzeinstellungen
+    description: Datenschutzeinstellungen des Browsers verwalten.
+    description_chrome: Interne Datenschutzeinstellungen von Chrome verwalten.
+    description_edge: Interne Datenschutzeinstellungen von Edge verwalten.
+    chrome_name: Chrome Datenschutzeinstellungen
+    edge_name: Edge Datenschutzeinstellungen
 sidepanel:
-  heading: "Interne Datenschutzeinstellungen des Browsers"
-  disclaimer: "Haftungsausschluss:"
-  disclaimerText: "Diese Erweiterung steht in keiner Verbindung mit $1."
-  managedText: "Alle Einstellungen werden innerhalb des Browsers über die browser.privacy Erweiterungs-API verwaltet."
-  learnMore: "Mehr über die browser.privacy API erfahren"
-  defaultLabel: "Standard:"
-  on: "An"
-  off: "Aus"
+    heading: Interne Datenschutzeinstellungen des Browsers
+    disclaimer: 'Haftungsausschluss:'
+    disclaimerText: Diese Erweiterung steht in keiner Verbindung mit $1.
+    managedText: Alle Einstellungen werden innerhalb des Browsers über die browser.privacy Erweiterungs-API verwaltet.
+    learnMore: Mehr über die browser.privacy API erfahren
+    defaultLabel: 'Standard:'
+    on: An
+    off: Aus
 settings:
-  services:
-    label: "Dienste"
-    description: "Einstellungen, die Funktionen aktivieren oder deaktivieren, die Netzwerkdienste von Drittanbietern erfordern, bereitgestellt von $2 und Ihrem Standardsuchanbieter."
-    autofillAddressEnabled:
-      label: "Adresse automatisch ausfüllen"
-      description: "Wenn aktiviert, bietet $1 an, Adressen und andere Formulardaten automatisch auszufüllen."
-    autofillCreditCardEnabled:
-      label: "Kreditkarte automatisch ausfüllen"
-      description: "Wenn aktiviert, bietet $1 an, Kreditkartenformulare automatisch auszufüllen."
-    passwordSavingEnabled:
-      label: "Passwörter speichern"
-      description: "Wenn aktiviert, fragt der Passwort-Manager, ob Sie Passwörter speichern möchten."
-    searchSuggestEnabled:
-      label: "Suchvorschläge"
-      description: "Wenn aktiviert, sendet $1 den Text, den Sie in die Omnibox eingeben, an Ihre Standardsuchmaschine, die Vorhersagen zu Websites und Suchanfragen liefert, die wahrscheinliche Vervollständigungen Ihrer bisherigen Eingabe sind."
-    spellingServiceEnabled:
-      label: "Rechtschreibdienst"
-      description: "Wenn aktiviert, verwendet $1 einen Webdienst zur Korrektur von Rechtschreibfehlern."
-    translationServiceEnabled:
-      label: "Übersetzungsdienst"
-      description: "Wenn aktiviert, bietet $1 an, Seiten zu übersetzen, die nicht in einer Sprache verfasst sind, die Sie lesen."
-    safeBrowsingEnabled:
-      label: "Safe Browsing"
-      description: "Wenn aktiviert, tut $1 sein Bestes, um Sie vor Phishing und Malware zu schützen."
-    safeBrowsingExtendedReportingEnabled:
-      label: "Erweiterte Safe Browsing-Berichterstattung"
-      description: "Wenn aktiviert, sendet $1 zusätzliche Informationen an $2, wenn SafeBrowsing eine Seite blockiert, z. B. den Inhalt der blockierten Seite."
-    alternateErrorPagesEnabled:
-      label: "Alternative Fehlerseiten"
-      description: "Wenn aktiviert, verwendet $1 einen Webdienst zur Behebung von Navigationsfehlern."
-  websites:
-    label: "Websites"
-    description: "Einstellungen, die bestimmen, welche Informationen $1 Websites zur Verfügung stellt."
-    doNotTrackEnabled:
-      label: "Do Not Track"
-      description: "Wenn aktiviert, sendet $1 den Header 'Do Not Track' (DNT: 1) mit Ihren Anfragen."
-    thirdPartyCookiesAllowed:
-      label: "Drittanbieter-Cookies erlaubt"
-      description: "Wenn deaktiviert, blockiert $1 das Setzen von Cookies durch Drittanbieter-Websites. Erweiterungen können diese API im Incognito-Modus nicht aktivieren, in dem Drittanbieter-Cookies blockiert sind und nur auf Website-Ebene zugelassen werden können. Wenn Sie versuchen, diese API im Incognito-Modus auf true zu setzen, wird ein Fehler ausgelöst. Hinweis Einzelne Websites können möglicherweise dennoch auf Drittanbieter-Cookies zugreifen, wenn diese API false zurückgibt, sofern sie eine gültige Ausnahme haben oder stattdessen die Storage Access API verwenden."
-    hyperlinkAuditingEnabled:
-      label: "Hyperlink-Überprüfung"
-      description: "Wenn aktiviert, sendet $1 Überprüfungs-Pings, wenn eine Website dies anfordert (<a ping>)."
-    protectedContentEnabled:
-      label: "Geschützte Inhalte"
-      description: "Wenn aktiviert, stellt $1 Plugins eine eindeutige ID zur Verfügung, um geschützte Inhalte abzuspielen."
-    referrersEnabled:
-      label: "Referrer"
-      description: "Wenn aktiviert, sendet $1 Referer-Header mit Ihren Anfragen."
-  network:
-    label: "Netzwerk"
-    description: "Einstellungen, die den Umgang von $1 mit Netzwerkverbindungen im Allgemeinen beeinflussen."
-    webRTCIPHandlingPolicy:
-      label: "WebRTC IP-Verarbeitungsrichtlinie"
-      description: "Ermöglicht Benutzern, die Abwägung zwischen Medienleistung und Datenschutz festzulegen, die beeinflusst, wie WebRTC-Datenverkehr geroutet wird und wie viele lokale Adressinformationen offengelegt werden."
-    networkPredictionEnabled:
-      label: "Netzwerkvorhersage"
-      description: "Wenn aktiviert, versucht $1, Ihr Surferlebnis zu beschleunigen, indem DNS-Einträge vorab aufgelöst und TCP- sowie SSL-Verbindungen zu Servern vorsorglich geöffnet werden. Diese Einstellung betrifft nur Aktionen des internen Vorhersagedienstes von $1. Sie hat keinen Einfluss auf von Webseiten initiierte Prefetches oder Preconnects."
-  webrtc:
-    default: "Standard"
-    default_public_and_private_interfaces: "Öffentliche und private Schnittstellen"
-    default_public_interface_only: "Nur öffentliche Schnittstelle"
-    disable_non_proxied_udp: "Nicht-proxied UDP deaktivieren"
+    services:
+        label: Dienste
+        description: Einstellungen, die Funktionen aktivieren oder deaktivieren, die Netzwerkdienste von Drittanbietern erfordern, bereitgestellt von $2 und Ihrem Standardsuchanbieter.
+        autofillAddressEnabled:
+            label: Adresse automatisch ausfüllen
+            description: 'Wenn aktiviert, bietet $1 an, Adressen und andere Formulardaten automatisch auszufüllen.'
+        autofillCreditCardEnabled:
+            label: Kreditkarte automatisch ausfüllen
+            description: 'Wenn aktiviert, bietet $1 an, Kreditkartenformulare automatisch auszufüllen.'
+        passwordSavingEnabled:
+            label: Passwörter speichern
+            description: 'Wenn aktiviert, fragt der Passwort-Manager, ob Sie Passwörter speichern möchten.'
+        searchSuggestEnabled:
+            label: Suchvorschläge
+            description: 'Wenn aktiviert, sendet $1 den Text, den Sie in die Omnibox eingeben, an Ihre Standardsuchmaschine, die Vorhersagen zu Websites und Suchanfragen liefert, die wahrscheinliche Vervollständigungen Ihrer bisherigen Eingabe sind.'
+        spellingServiceEnabled:
+            label: Rechtschreibdienst
+            description: 'Wenn aktiviert, verwendet $1 einen Webdienst zur Korrektur von Rechtschreibfehlern.'
+        translationServiceEnabled:
+            label: Übersetzungsdienst
+            description: 'Wenn aktiviert, bietet $1 an, Seiten zu übersetzen, die nicht in einer Sprache verfasst sind, die Sie lesen.'
+        safeBrowsingEnabled:
+            label: Safe Browsing
+            description: 'Wenn aktiviert, tut $1 sein Bestes, um Sie vor Phishing und Malware zu schützen.'
+        safeBrowsingExtendedReportingEnabled:
+            label: Erweiterte Safe Browsing-Berichterstattung
+            description: 'Wenn aktiviert, sendet $1 zusätzliche Informationen an $2, wenn SafeBrowsing eine Seite blockiert, z. B. den Inhalt der blockierten Seite.'
+        alternateErrorPagesEnabled:
+            label: Alternative Fehlerseiten
+            description: 'Wenn aktiviert, verwendet $1 einen Webdienst zur Behebung von Navigationsfehlern.'
+    websites:
+        label: Websites
+        description: Einstellungen, die bestimmen, welche Informationen $1 Websites zur Verfügung stellt.
+        doNotTrackEnabled:
+            label: Do Not Track
+            description: "Wenn aktiviert, sendet $1 den Header 'Do Not Track' (DNT: 1) mit Ihren Anfragen."
+        thirdPartyCookiesAllowed:
+            label: Drittanbieter-Cookies erlaubt
+            description: 'Wenn deaktiviert, blockiert $1 das Setzen von Cookies durch Drittanbieter-Websites. Erweiterungen können diese API im Incognito-Modus nicht aktivieren, in dem Drittanbieter-Cookies blockiert sind und nur auf Website-Ebene zugelassen werden können. Wenn Sie versuchen, diese API im Incognito-Modus auf true zu setzen, wird ein Fehler ausgelöst. Hinweis Einzelne Websites können möglicherweise dennoch auf Drittanbieter-Cookies zugreifen, wenn diese API false zurückgibt, sofern sie eine gültige Ausnahme haben oder stattdessen die Storage Access API verwenden.'
+        hyperlinkAuditingEnabled:
+            label: Hyperlink-Überprüfung
+            description: 'Wenn aktiviert, sendet $1 Überprüfungs-Pings, wenn eine Website dies anfordert (<a ping>).'
+        protectedContentEnabled:
+            label: Geschützte Inhalte
+            description: 'Wenn aktiviert, stellt $1 Plugins eine eindeutige ID zur Verfügung, um geschützte Inhalte abzuspielen.'
+        referrersEnabled:
+            label: Referrer
+            description: 'Wenn aktiviert, sendet $1 Referer-Header mit Ihren Anfragen.'
+    network:
+        label: Netzwerk
+        description: Einstellungen, die den Umgang von $1 mit Netzwerkverbindungen im Allgemeinen beeinflussen.
+        webRTCIPHandlingPolicy:
+            label: WebRTC IP-Verarbeitungsrichtlinie
+            description: Ermöglicht Benutzern, die Abwägung zwischen Medienleistung und Datenschutz festzulegen, die beeinflusst, wie WebRTC-Datenverkehr geroutet wird und wie viele lokale Adressinformationen offengelegt werden.
+        networkPredictionEnabled:
+            label: Netzwerkvorhersage
+            description: 'Wenn aktiviert, versucht $1, Ihr Surferlebnis zu beschleunigen, indem DNS-Einträge vorab aufgelöst und TCP- sowie SSL-Verbindungen zu Servern vorsorglich geöffnet werden. Diese Einstellung betrifft nur Aktionen des internen Vorhersagedienstes von $1. Sie hat keinen Einfluss auf von Webseiten initiierte Prefetches oder Preconnects.'
+    webrtc:
+        default: Standard
+        default_public_and_private_interfaces: Öffentliche und private Schnittstellen
+        default_public_interface_only: Nur öffentliche Schnittstelle
+        disable_non_proxied_udp: Nicht-proxied UDP deaktivieren

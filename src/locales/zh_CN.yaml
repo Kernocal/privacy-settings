@@ -1,79 +1,79 @@
 extension:
-  name: "隐私控制"
-  description: "管理浏览器的隐私控制。"
-  description_chrome: "管理 Chrome 的内部隐私设置。"
-  description_edge: "管理 Edge 的内部隐私设置。"
-  chrome_name: "Chrome 隐私控制"
-  edge_name: "Edge 隐私控制"
+    name: 隐私控制
+    description: "管理浏览器的隐私控制。"
+    description_chrome: "管理 Chrome 的内部隐私设置。"
+    description_edge: "管理 Edge 的内部隐私设置。"
+    chrome_name: Chrome 隐私控制
+    edge_name: Edge 隐私控制
 sidepanel:
-  heading: "浏览器内部隐私控制"
-  disclaimer: "免责声明："
-  disclaimerText: "此扩展程序与 $1 无关。"
-  managedText: "所有设置均通过 browser.privacy 扩展 API 在浏览器内部进行管理。"
-  learnMore: "了解有关 browser.privacy API 的更多信息"
-  defaultLabel: "默认值："
-  on: "开启"
-  off: "关闭"
+    heading: 浏览器内部隐私控制
+    disclaimer: '免责声明：'
+    disclaimerText: 此扩展程序与 $1 无关。
+    managedText: 所有设置均通过 browser.privacy 扩展 API 在浏览器内部进行管理。
+    learnMore: 了解有关 browser.privacy API 的更多信息
+    defaultLabel: '默认值：'
+    on: 开启
+    off: 关闭
 settings:
-  services:
-    label: "服务"
-    description: "启用或禁用由 $2 和您的默认搜索引擎提供的需要第三方网络服务的功能的设置。"
-    autofillAddressEnabled:
-      label: "自动填充地址"
-      description: "启用后，$1 会自动填充地址和其他表单数据。"
-    autofillCreditCardEnabled:
-      label: "自动填充信用卡"
-      description: "启用后，$1 会自动填充信用卡表单。"
-    passwordSavingEnabled:
-      label: "密码保存"
-      description: "启用后，密码管理器会询问您是否要保存密码。"
-    searchSuggestEnabled:
-      label: "搜索建议"
-      description: "启用后，$1 会将您在 Omnibox 中输入的文本发送到默认搜索引擎，搜索引擎会预测您可能要访问的网站和搜索内容。"
-    spellingServiceEnabled:
-      label: "拼写检查服务"
-      description: "启用后，$1 使用网络服务来帮助纠正拼写错误。"
-    translationServiceEnabled:
-      label: "翻译服务"
-      description: "启用后，$1 会提供翻译非您所用语言页面的功能。"
-    safeBrowsingEnabled:
-      label: "安全浏览"
-      description: "启用后，$1 会尽最大努力保护您免受网络钓鱼和恶意软件的侵害。"
-    safeBrowsingExtendedReportingEnabled:
-      label: "安全浏览扩展报告"
-      description: "启用后，当 SafeBrowsing 拦截页面时，$1 会向 $2 发送额外信息，例如被拦截页面的内容。"
-    alternateErrorPagesEnabled:
-      label: "备用错误页面"
-      description: "启用后，$1 使用网络服务来帮助解决导航错误。"
-  websites:
-    label: "网站"
-    description: "决定 $1 向网站提供哪些信息的设置。"
-    doNotTrackEnabled:
-      label: "禁止跟踪"
-      description: "启用后，$1 会在您的请求中发送禁止跟踪（DNT: 1）标头。"
-    thirdPartyCookiesAllowed:
-      label: "允许第三方 Cookie"
-      description: "禁用后，$1 会阻止第三方网站设置 Cookie。扩展程序无法在 Incognito 模式下启用此 API，因为在该模式下第三方 Cookie 被阻止，只能在站点级别允许。如果您尝试在 Incognito 中将此 API 设置为 true，将会抛出错误。注意：当此 API 返回 false 时，如果个别站点拥有有效的豁免或使用了 Storage Access API，它们仍然可能访问第三方 Cookie。"
-    hyperlinkAuditingEnabled:
-      label: "超链接审计"
-      description: "启用后，$1 会在网站请求时发送审计 ping（<a ping>）。"
-    protectedContentEnabled:
-      label: "受保护内容"
-      description: "启用后，$1 会向插件提供唯一 ID 以运行受保护的内容。"
-    referrersEnabled:
-      label: "引用来源"
-      description: "启用后，$1 会在您的请求中发送引用来源标头。"
-  network:
-    label: "网络"
-    description: "影响 $1 处理网络连接的常规设置。"
-    webRTCIPHandlingPolicy:
-      label: "WebRTC IP 处理策略"
-      description: "允许用户指定媒体性能与隐私之间的权衡，这会影响 WebRTC 流量的路由方式以及本地地址信息的暴露程度。"
-    networkPredictionEnabled:
-      label: "网络预测"
-      description: "启用后，$1 会通过预解析 DNS 条目以及预先打开到服务器的 TCP 和 SSL 连接来加速您的网页浏览体验。此偏好设置仅影响 $1 内部预测服务执行的操作，不影响网页发起的预取或预连接。"
-  webrtc:
-    default: "默认"
-    default_public_and_private_interfaces: "公共和私有接口"
-    default_public_interface_only: "仅公共接口"
-    disable_non_proxied_udp: "禁用非代理 UDP"
+    services:
+        label: 服务
+        description: 启用或禁用由 $2 和您的默认搜索引擎提供的需要第三方网络服务的功能的设置。
+        autofillAddressEnabled:
+            label: 自动填充地址
+            description: '启用后，$1 会自动填充地址和其他表单数据。'
+        autofillCreditCardEnabled:
+            label: 自动填充信用卡
+            description: '启用后，$1 会自动填充信用卡表单。'
+        passwordSavingEnabled:
+            label: 密码保存
+            description: '启用后，密码管理器会询问您是否要保存密码。'
+        searchSuggestEnabled:
+            label: 搜索建议
+            description: '启用后，$1 会将您在 Omnibox 中输入的文本发送到默认搜索引擎，搜索引擎会预测您可能要访问的网站和搜索内容。'
+        spellingServiceEnabled:
+            label: 拼写检查服务
+            description: '启用后，$1 使用网络服务来帮助纠正拼写错误。'
+        translationServiceEnabled:
+            label: 翻译服务
+            description: '启用后，$1 会提供翻译非您所用语言页面的功能。'
+        safeBrowsingEnabled:
+            label: 安全浏览
+            description: '启用后，$1 会尽最大努力保护您免受网络钓鱼和恶意软件的侵害。'
+        safeBrowsingExtendedReportingEnabled:
+            label: 安全浏览扩展报告
+            description: '启用后，当 SafeBrowsing 拦截页面时，$1 会向 $2 发送额外信息，例如被拦截页面的内容。'
+        alternateErrorPagesEnabled:
+            label: 备用错误页面
+            description: '启用后，$1 使用网络服务来帮助解决导航错误。'
+    websites:
+        label: 网站
+        description: 决定 $1 向网站提供哪些信息的设置。
+        doNotTrackEnabled:
+            label: 禁止跟踪
+            description: "启用后，$1 会在您的请求中发送禁止跟踪（DNT: 1）标头。"
+        thirdPartyCookiesAllowed:
+            label: 允许第三方 Cookie
+            description: '禁用后，$1 会阻止第三方网站设置 Cookie。扩展程序无法在 Incognito 模式下启用此 API，因为在该模式下第三方 Cookie 被阻止，只能在站点级别允许。如果您尝试在 Incognito 中将此 API 设置为 true，将会抛出错误。注意：当此 API 返回 false 时，如果个别站点拥有有效的豁免或使用了 Storage Access API，它们仍然可能访问第三方 Cookie。'
+        hyperlinkAuditingEnabled:
+            label: 超链接审计
+            description: '启用后，$1 会在网站请求时发送审计 ping（<a ping>）。'
+        protectedContentEnabled:
+            label: 受保护内容
+            description: '启用后，$1 会向插件提供唯一 ID 以运行受保护的内容。'
+        referrersEnabled:
+            label: 引用来源
+            description: '启用后，$1 会在您的请求中发送引用来源标头。'
+    network:
+        label: 网络
+        description: "影响 $1 处理网络连接的常规设置。"
+        webRTCIPHandlingPolicy:
+            label: WebRTC IP 处理策略
+            description: 允许用户指定媒体性能与隐私之间的权衡，这会影响 WebRTC 流量的路由方式以及本地地址信息的暴露程度。
+        networkPredictionEnabled:
+            label: 网络预测
+            description: "启用后，$1 会通过预解析 DNS 条目以及预先打开到服务器的 TCP 和 SSL 连接来加速您的网页浏览体验。此偏好设置仅影响 $1 内部预测服务执行的操作，不影响网页发起的预取或预连接。"
+    webrtc:
+        default: 默认
+        default_public_and_private_interfaces: 公共和私有接口
+        default_public_interface_only: 仅公共接口
+        disable_non_proxied_udp: 禁用非代理 UDP
